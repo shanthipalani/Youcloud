@@ -64,7 +64,8 @@ class Form extends Component {
         return (
             <div className="container-fluid">
                 <div className="row">
-                    <header className="nav">
+                <div className="font_family_text">
+                    <header className="nav p-2">
                         <div className="head container-fluid">
                             <span>Copyright <AiFillCopyrightCircle /> 1996-2021 YouShop Ltd. All rights reserved</span>
                             <span>Terms of Use - Privacy Policy - Link to Us</span>
@@ -124,11 +125,11 @@ class Form extends Component {
                                     </div>
                                     <br></br>
                                     <div>
-                                        <button className="button-2"><img src={Google} />&nbsp;&nbsp;&nbsp; Continue with Google</button>
+                                        <button className="button-2  d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Google} />&nbsp;&nbsp;&nbsp; Continue with Google</button>
                                     </div>
                                     <br></br>
                                     <div>
-                                        <button className="button-2"><img src={Fb} />&nbsp; Continue with Facebook</button>
+                                        <button className="button-2 d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Fb} />&nbsp; Continue with Facebook</button>
                                     </div>
                                     <br></br>
                                     <div>
@@ -139,7 +140,7 @@ class Form extends Component {
                         </div>
                     </section>
 
-
+                </div>
                 </div>
             </div>
         );

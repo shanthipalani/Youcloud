@@ -123,11 +123,11 @@ class Form2 extends Component {
                                     </div>
                                     <br></br>
                                     <div>
-                                        <button className="button-2a d-flex justify-content-between align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Google}/><div className="small d-md-none">Continue with Google</div><div className="d-none d-md-flex">Continue with Google</div></button>
+                                        <button className="button-2a d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Google}/><div className="small d-md-none">Continue with Google</div><div className="d-none d-md-flex">Continue with Google</div></button>
                                     </div>
                                     <br></br>
                                     <div>
-                                        <button className="button-2a d-flex justify-content-between align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Fb}/><div className="small d-md-none">Continue with Facebook</div><div className="d-none d-md-flex">Continue with Facebook</div></button>
+                                        <button className="button-2a d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Fb}/><div className="small d-md-none">Continue with Facebook</div><div className="d-none d-md-flex">Continue with Facebook</div></button>
                                     </div>
                                     <br></br>
                                     <div>
