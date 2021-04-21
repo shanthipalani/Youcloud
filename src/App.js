@@ -16,12 +16,12 @@ function App() {
   return (
 
       <div>
-        {/* <Form/> */}
-        <Switch>
+        <Form/>
+        {/* <Switch>
           <Route path='/' exact><Form></Form></Route>
           <Route path="/forgotpassword" exact component={Password} />
           <Route path="/SignUp" exact component={Signup}/>
-          <Route path="/SignIn" exact component={Form}/>
+          <Route path="/SignIn" exact component={Form}/> */}
           
         
           {/* <Form2/> */}
@@ -29,7 +29,7 @@ function App() {
           {/* <Signup/> */}
           {/* <Layout/> */}
           {/* <Password /> */}
-        </Switch>
+        {/* </Switch> */}
     </div>
   
   );

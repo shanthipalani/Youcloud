@@ -79,18 +79,18 @@ class Form2 extends Component {
                             </div>
 
 
-                            <div className="signin-1 p-4 p-md-5 col-sm-6">
+                            <div className="signin-1 col-sm-6">
                                 <div className="">
                                     <h3 className="welcome_back"><strong>Welcome Back !</strong></h3>
                                     <p className="online">Online Grocery Shopping</p><br/>
                                     <form>
                                         <div className="form-group mb-4">
-                                            <label htmlFor="email"><strong>Email</strong></label><br></br>
+                                            <label className="email_color" htmlFor="email"><strong>Email</strong></label><br></br>
                                             <input type="email" name="email" id="email" placeholder="Enter your email" onChange={this.handleChange}/>
                                             {this.state.error.email.length>1?<span className="text-danger">{this.state.errors.email}</span>:""}
                                         </div>
                                         <div className="form-group mb-4">
-                                            <label htmlFor="Password"><strong>Password</strong></label><br></br>
+                                            <label className="password_color" htmlFor="Password"><strong>Password</strong></label><br></br>
                                             <div className="position-relative">
                                                 <input type="Password" name="password" id="Password" placeholder="Enter your password" className="password_place" onChange={this.handleChange} />
                                                 {this.state.error.password.length>1?<span className="text-danger">{this.state.errors.password}</span>:""}

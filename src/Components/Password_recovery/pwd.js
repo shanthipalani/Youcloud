@@ -19,7 +19,7 @@ class Password extends Component {
                             </div><br/>
                             <form>
                                 <div className="form-group form_email">
-                                    <label htmlFor="Email"><strong>Email address</strong></label><br />
+                                    <label classname="emailaddress_color" htmlFor="Email"><strong>Email address</strong></label><br />
                                     <input className="form_input" type="email" id="Email" name="email" placeholder="resetpassword@gmail.com"></input>
                                 </div>
                                 <div className="d-flex justify-content-between align-items-center w-100 px-2 px-md-3 px-xl-5 flex-column flex-md-row">

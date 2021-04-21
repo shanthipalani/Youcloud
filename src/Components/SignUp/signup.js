@@ -87,7 +87,9 @@ class signup extends Component {
                             </div>
                             <div>
                                 <label htmlFor="country"><strong>Country</strong></label><br />
-                                <select id="country" name="country">
+                                <div className="position-relative">
+                                    <input type="country" placeholder="Select Country" ></input>
+                                <select id="country" name="country" className="position-absolute country_place" >
                                     <option value="Afganistan">Afghanistan</option>
                                     <option value="Albania">Albania</option>
                                     <option value="Algeria">Algeria</option>
@@ -334,7 +336,7 @@ class signup extends Component {
                                     <option value="Zaire">Zaire</option>
                                     <option value="Zambia">Zambia</option>
                                     <option value="Zimbabwe">Zimbabwe</option>
-                                </select><br />
+                                </select></div><br />
                             </div><br/>
                             <div>
                                 <label htmlFor="phone"><strong>Phone Number</strong></label><br/>
@@ -342,7 +344,7 @@ class signup extends Component {
                             </div><br />
                             <div>
                             <input className="accept_terms" type="checkbox"></input>&nbsp;
-                            <label htmlFor="checkbox"> Accept term of service</label>
+                            <label className="accept_terms_color" htmlFor="checkbox"> Accept term of service</label>
                             </div><br/>
                             <div className="sign_up">
                                 <button className="signup_button" onClick={this.submitHandler}>Sign up</button>
@@ -351,7 +353,7 @@ class signup extends Component {
                                 <span className="text-danger">{this.state.totalError!== null ? <span>{this.state.totalError}</span>:""}</span>
                             </div><br/>
                             <div className="dont_have_an_acc">
-                                <p>Don't have an account? <a className="signin_buttoncolor"href="/SignIn">Sign In</a></p>
+                                <p className="dont_have_an_acc_color">Don't have an account? <a className="signin_buttoncolor"href="/SignIn">Sign In</a></p>
                             </div>
                         </form>
                     </div>
