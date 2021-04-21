@@ -1,0 +1,324 @@
+
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+
+body {
+  position: relative;
+  height: 100%;
+}
+
+.mobile-header-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  .menu-btn {
+    border: none;
+    background-color: transparent;
+    margin-left: -15px;
+    outline: 0px;
+    transition: 0.3s transform;
+    i {
+      font-size: 22px;
+    }
+    &:active {
+      transform: scale(0.7);
+      color: black;
+    }
+  }
+  .mobile-logo-wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+
+    img {
+      max-height: 51px;
+      @include media-breakpoint-down(xs) {
+        height: 40px;
+      }
+    }
+  }
+  .mobile-currency-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    select {
+      -webkit-appearance: none;
+      font-weight: bold;
+      padding-left: 30px;
+      font-size: 12px;
+    }
+
+    i {
+      position: absolute;
+      top: 20px;
+      left: 12px;
+      color: #dca815;
+    }
+  }
+}
+
+.default-sidebar {
+  &.sidebar-open {
+    .sidebar {
+      transform: translateX(0) !important;
+    }
+    .sidebar-backdrop {
+      display: block;
+    }
+  }
+
+  .sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.253);
+    display: none;
+    z-index: 99;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80vw;
+    max-width: 300px;
+    background-color: white;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: 0.4s transform;
+    z-index: 100;
+
+  
+    .sidebar-content {
+      flex: 1;
+      overflow: auto;
+
+      li {
+        a {
+          color: #656565;
+
+          &:hover {
+            color: #474646;
+          }
+          &:active {
+            color: #252525;
+          }
+        }
+        &.selected {
+          background-color: rgb(236, 232, 232);
+        }
+      }
+    }
+    .sidebar-footer {
+      flex-shrink: 0;
+
+      .sign-up {
+        border-bottom: solid 1px #a5a5a5;
+        span {
+          color: #a5a5a5;
+          font-weight: bold;
+        }
+        button {
+          background-color: blue;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+header{
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 101;
+  .travellerdashboard {
+    position: relative;
+  }
+  .header-wrapper-left {
+    display: flex;
+    flex-direction: row;
+    .search-box {
+      .form-control {
+        font-size: 13px;
+      }
+    }
+    .logo-wrapper {
+      img {
+        max-height: 38px;
+        transform: scale(1.4);
+      }
+    }
+
+    .currency-wrapper {
+      flex-shrink: 0;
+      position: relative;
+
+      i {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        color: #dca815;
+      }
+      select {
+        -webkit-appearance: none;
+        font-weight: bold;
+        padding-left: 30px;
+        font-size: 12px;
+      }
+    }
+  }
+  .language-flag-wrapper {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    h6 {
+      font-size: 10px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    img {
+      height: 25px;
+      @include media-breakpoint-down(xs) {
+        height: 20px;
+      }
+    }
+  }
+  .header-wrapper-right {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    button {
+      font-size: 14px;
+      background-color: transparent;
+      &:active {
+        color: unset;
+      }
+    }
+    a {
+      color: #656565;
+      font-size: 14px;
+
+      &[data-tbpath="/dashboard"] {
+        font-weight: bold;
+      }
+
+      &:hover {
+        color: #474646;
+      }
+      &:active {
+        color: #252525;
+      }
+    }
+    .navbar-wrapper {
+      .nav-item {
+        &.selected-item {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            left: 0;
+            background-color: #0a9473;
+            height: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-header-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    .menu-btn {
+      border: none;
+      background-color: transparent;
+      margin-left: -15px;
+      outline: 0px;
+      transition: 0.3s transform;
+      i {
+        font-size: 22px;
+      }
+      &:active {
+        transform: scale(0.7);
+        color: black;
+      }
+    }
+    .mobile-logo-wrapper {
+      display: flex;
+      flex: 1;
+      align-items: center;
+
+      img {
+        max-height: 51px;
+        @include media-breakpoint-down(xs) {
+          height: 40px;
+        }
+      }
+    }
+
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

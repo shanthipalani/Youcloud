@@ -5,6 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 //import Form from './Components/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import "@fortawesome/fontawesome-free/css/all.css";
+import "@fortawesome/fontawesome-free/scss/regular.scss";
+import "@fortawesome/fontawesome-free/scss/solid.scss";
 import{BrowserRouter} from 'react-router-dom'
 
 ReactDOM.render(  
