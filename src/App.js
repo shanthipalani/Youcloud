@@ -14,7 +14,8 @@ import { Switch, Route} from 'react-router-dom'
 
 function App() {
   return (
-      <>
+
+      <div>
         {/* <Form/> */}
         {/* <Switch>
           <Route path='/' exact><Form></Form></Route>
@@ -29,7 +30,7 @@ function App() {
           {/* <Layout/> */}
           {/* <Password /> */}
         {/* </Switch> */}
-    </>
+    </div>
   
   );
 }
