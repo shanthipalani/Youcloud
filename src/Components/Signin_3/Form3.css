@@ -132,3 +132,8 @@ background-size:cover;
 hr{
     border: 1px solid rgb(241, 240, 240);
 }
+
+.password_place{
+    z-index: 9;
+    padding-right: 47px;
+}

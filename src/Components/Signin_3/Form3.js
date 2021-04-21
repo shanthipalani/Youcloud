@@ -5,7 +5,7 @@ import { AiFillFacebook } from 'react-icons/ai';
 import Nav from '../navigation/nav'
 import Google from '../../Asset/images/Google.png'
 import Fb from '../../Asset/images/Fb.png'
-
+import eye from '../../Asset/images/eye.png';
 import Footer from '../Footer/footer'
 
 
@@ -76,8 +76,11 @@ class Form3 extends Component {
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="Password"><strong>Password</strong></label><br />
-                                        <input type="password" name="password" id="Password" placeholder="Enter your password" onChange={this.handleChange} />
-                                        {this.state.error.password.length > 1 ? <span className="text-danger">{this.state.errors.password}</span> : ""}
+                                        <div className="position-relative">
+                                            <input type="password" name="password" id="Password" placeholder="Enter your password" className="password_place" onChange={this.handleChange} />
+                                            {this.state.error.password.length > 1 ? <span className="text-danger">{this.state.errors.password}</span> : ""}
+                                            <img className="position-absolute eye_image" src={eye}/>
+                                        </div>
                                     </div>
                                     <div className="form-group mb-4">
                                         <div className="col-sm-12">

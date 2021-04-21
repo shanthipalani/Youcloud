@@ -61,86 +61,169 @@ class Form extends Component {
     }
 
     render() {
+        // return (
+        //     <div className="container-fluid">
+        //         <div className="row">
+        //         <div className="font_family_text">
+        //             <header className="nav p-2">
+        //                 <div className="head container-fluid">
+        //                     <span>Copyright <AiFillCopyrightCircle /> 1996-2021 YouShop Ltd. All rights reserved</span>
+        //                     <span>Terms of Use - Privacy Policy - Link to Us</span>
+        //                 </div>
+        //             </header>
+                    
+        //             <section className="landing_screen col-lg-12">
+        //                 <div className="row h-100 mobile_view">
+        //                     <div className=" mobile_img col-lg-6">
+        //                         <div className="row">
+        //                             <img src={cell} alt="Phone" />
+        //                         </div>
+        //                     </div>
+
+        //                     <div className="signin col-sm-6">
+        //                         <div className="">
+        //                             <h3 className="welcome_back_size"><strong>Welcome Back !</strong></h3>
+        //                             <p className="online_size">Online Grocery Shopping</p><br />
+        //                             <form>
+        //                                 <div className="form-group mb-4">
+        //                                     <label className="Email_size" htmlFor="email"><strong>Email</strong></label><br></br>
+        //                                     <input type="email"name="email" id="email" placeholder="Enter your email" onChange={this.handleChange} />
+        //                                     {this.state.error.email.length>1?<span className="text-danger">{this.state.errors.email}</span>:""}
+        //                                 </div>
+        //                                 <div className="form-group mb-4">
+        //                                     <label htmlFor="Password"><strong>Password</strong></label><br></br>
+        //                                     <div className="position-relative">
+        //                                         <input type="Password"name="password"id="Password" placeholder="Enter your password" className="password_place" onChange={this.handleChange}/>
+        //                                         {this.state.error.password.length>1?<span className="text-danger">{this.state.errors.password}</span>:""}
+        //                                         <img className="position-absolute eye_image" src={eye}/>
+        //                                     </div>
+        //                                 </div>
+        //                                 <div className="form-group mb-4">
+
+        //                                     <div className="col-sm-12">
+        //                                         <div className="row">
+        //                                             <div className="col-sm-6">
+        //                                                 <div className="row d-flex align-items-center">
+        //                                                     <input type="checkbox" className="keep-signed" name="signed" />
+        //                                                     <label for="signed" className="mb-0 keep_me_signed_color">&nbsp; Keep me signed</label>
+        //                                                 </div>
+        //                                             </div>
+
+
+        //                                             <div className="col-sm-6">
+        //                                                 <div className="row d-flex justify-content-end">
+        //                                                     <a className="forgot_password_color" href="/forgotpassword">Forgot Password?</a>
+        //                                                 </div>
+        //                                             </div>
+        //                                         </div>
+        //                                     </div>
+        //                                 </div>
+        //                             </form>
+        //                             <button className="button-1"> Sign In</button>
+        //                             <div className="signin-divider mt-4 d-flex">
+        //                                 <span className="or_color">Or</span><hr />
+        //                             </div>
+        //                             <br></br>
+        //                             <div>
+        //                                 <button className="button-2  d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Google} />&nbsp;&nbsp;&nbsp; Continue with Google</button>
+        //                             </div>
+        //                             <br></br>
+        //                             <div>
+        //                                 <button className="button-2 d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Fb} />&nbsp; Continue with Facebook</button>
+        //                             </div>
+        //                             <br></br>
+        //                             <div>
+        //                                 <p className="dont_have_an_account_size">Don't Have an Account? <a className="Signup_buttoncolor" href="/SignUp"> Sign Up</a> </p>
+        //                             </div>
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //             </section>
+
+        //         </div>
+        //         </div>
+        //     </div>
+        // );
         return (
             <div className="container-fluid">
                 <div className="row">
                 <div className="font_family_text">
                     <header className="nav p-2">
-                        <div className="head container-fluid">
-                            <span>Copyright <AiFillCopyrightCircle /> 1996-2021 YouShop Ltd. All rights reserved</span>
-                            <span>Terms of Use - Privacy Policy - Link to Us</span>
+                        <div className="head-1 container-fluid">
+                            <span>Copyright < AiFillCopyrightCircle/> 1996-2021 YouShop Ltd. All rights reserved</span>
+                            <span>Terms of Use - Privacy Policy - Link to Us</span>                            
                         </div>
                     </header>
-                    
-                    <section className="landing_screen col-lg-12">
-                        <div className="row h-100 mobile_view">
-                            <div className=" mobile_img col-lg-6">
+
+                    <section className="landing_screen col-lg-12 px-4 px-sm-5">
+                        <div className="row h-100 mobile_view_1">
+                            <div className=" mobile_img-1 col-lg-6">
                                 <div className="row">
                                     <img src={cell} alt="Phone" />
                                 </div>
                             </div>
 
-                            <div className="signin col-sm-6">
+
+                            <div className="signin-1 p-4 p-md-5 col-sm-6">
                                 <div className="">
-                                    <h3 className="welcome_back_size"><strong>Welcome Back !</strong></h3>
-                                    <p className="online_size">Online Grocery Shopping</p><br />
+                                    <h3 className="welcome_back"><strong>Welcome Back !</strong></h3>
+                                    <p className="online">Online Grocery Shopping</p><br/>
                                     <form>
                                         <div className="form-group mb-4">
-                                            <label className="Email_size" htmlFor="email"><strong>Email</strong></label><br></br>
-                                            <input type="email"name="email" id="email" placeholder="Enter your email" onChange={this.handleChange} />
+                                            <label htmlFor="email"><strong>Email</strong></label><br></br>
+                                            <input type="email" name="email" id="email" placeholder="Enter your email" onChange={this.handleChange}/>
                                             {this.state.error.email.length>1?<span className="text-danger">{this.state.errors.email}</span>:""}
                                         </div>
                                         <div className="form-group mb-4">
                                             <label htmlFor="Password"><strong>Password</strong></label><br></br>
                                             <div className="position-relative">
-                                                <input type="Password"name="password"id="Password" placeholder="Enter your password" className="password_place" onChange={this.handleChange}/>
+                                                <input type="Password" name="password" id="Password" placeholder="Enter your password" className="password_place" onChange={this.handleChange} />
                                                 {this.state.error.password.length>1?<span className="text-danger">{this.state.errors.password}</span>:""}
                                                 <img className="position-absolute eye_image" src={eye}/>
                                             </div>
                                         </div>
                                         <div className="form-group mb-4">
-
                                             <div className="col-sm-12">
                                                 <div className="row">
                                                     <div className="col-sm-6">
                                                         <div className="row d-flex align-items-center">
-                                                            <input type="checkbox" className="keep-signed" name="signed" />
-                                                            <label for="signed" className="mb-0 keep_me_signed_color">&nbsp; Keep me signed</label>
+                                                            <input type="checkbox" className="keep-signed-1" name="signed" />
+                                                            <label for="signed" className="mb-0 keep_me_signed_font_color">&nbsp; Keep me signed</label>
                                                         </div>
                                                     </div>
 
 
                                                     <div className="col-sm-6">
                                                         <div className="row d-flex justify-content-end">
-                                                            <a className="forgot_password_color" href="/forgotpassword">Forgot Password?</a>
+                                                            <a className="forgot_password_color" href="/Forgot Password">Forgot Password?</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
-                                    <button className="button-1"> Sign In</button>
+                                    <button className="button-1a"> Sign in</button>
                                     <div className="signin-divider mt-4 d-flex">
-                                        <span className="or_color">Or</span><hr />
+                                        <span className="or_font_color">Or</span><hr />
                                     </div>
                                     <br></br>
                                     <div>
-                                        <button className="button-2  d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Google} />&nbsp;&nbsp;&nbsp; Continue with Google</button>
+                                        <button className="button-2a d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Google}/><div className="small d-md-none">Continue with Google</div><div className="d-none d-md-flex">Continue with Google</div></button>
                                     </div>
                                     <br></br>
                                     <div>
-                                        <button className="button-2 d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Fb} />&nbsp; Continue with Facebook</button>
+                                        <button className="button-2a d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Fb}/><div className="small d-md-none">Continue with Facebook</div><div className="d-none d-md-flex">Continue with Facebook</div></button>
                                     </div>
                                     <br></br>
                                     <div>
-                                        <p className="dont_have_an_account_size">Don't Have an Account? <a className="Signup_buttoncolor" href="/SignUp"> Sign Up</a> </p>
+                                        <p className="dont_have_an_accountsize">Don't Have an Account? <a className="Signup_buttoncolor" href="/Sign Up"> Sign Up</a> </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                </div>
+                  </div>        
                 </div>
             </div>
         );

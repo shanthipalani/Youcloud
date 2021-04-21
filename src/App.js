@@ -15,7 +15,7 @@ import { Switch, Route} from 'react-router-dom'
 function App() {
   return (
       <>
-        <Form/>
+        {/* <Form/> */}
         {/* <Switch>
           <Route path='/' exact><Form></Form></Route>
           <Route path="/forgotpassword" exact component={Password} />
@@ -23,11 +23,11 @@ function App() {
           <Route path="/SignIn" exact component={Form}/> */}
           
         
-          <Form2/>
-          <Form3/>
+          {/* <Form2/> */}
+          {/* <Form3/> */}
           <Signup/>
           {/* <Layout/> */}
-          <Password />
+          {/* <Password /> */}
         {/* </Switch> */}
     </>
   
