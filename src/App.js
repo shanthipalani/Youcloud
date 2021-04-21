@@ -17,19 +17,19 @@ function App() {
 
       <div>
         {/* <Form/> */}
-        {/* <Switch>
+        <Switch>
           <Route path='/' exact><Form></Form></Route>
           <Route path="/forgotpassword" exact component={Password} />
           <Route path="/SignUp" exact component={Signup}/>
-          <Route path="/SignIn" exact component={Form}/> */}
+          <Route path="/SignIn" exact component={Form}/>
           
         
           {/* <Form2/> */}
           {/* <Form3/> */}
-          <Signup/>
+          {/* <Signup/> */}
           {/* <Layout/> */}
           {/* <Password /> */}
-        {/* </Switch> */}
+        </Switch>
     </div>
   
   );
