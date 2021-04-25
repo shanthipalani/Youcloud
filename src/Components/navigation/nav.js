@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
-import { ImLocation2 } from 'react-icons/im';
-import { HiOutlineUser } from 'react-icons/hi';
-import { FaBars } from 'react-icons/fa'
-import { BiHeart, BiCartAlt, BiSearch, BiHelpCircle } from 'react-icons/bi'
-import { AiOutlineShop } from 'react-icons/ai'
-import { GrShieldSecurity } from 'react-icons/gr';
-import './nav.css'
-import MaterialIcon from 'react-google-material-icons'
+import React, { useState } from 'react'; 
+import {  BiCartAlt, BiSearch, BiHelpCircle } from 'react-icons/bi' 
+import './nav.css' 
 import Pin from '../../Asset/images/pin.png'
 import Blogging from '../../Asset/images/blogging.png'
 import User from '../../Asset/images/user.png'
@@ -16,7 +10,7 @@ import Cartsmall from '../../Asset/images/Cartsmall.png'
 import Layer_8 from '../../Asset/images/Layer_8.png'
 import Healthcare from '../../Asset/images/Healthcare.png'
 import Help from '../../Asset/images/help.png'
- 
+ import Category from './category'
 import { Link, useHistory } from "react-router-dom";
 
 function Nav(props) {
@@ -24,7 +18,7 @@ function Nav(props) {
     return (
         <>
      
-            <header>
+            <header >
                 <div className="nav-2 d-none d-md-flex">
                 <div className="head-2 container">
  
@@ -43,10 +37,13 @@ function Nav(props) {
             className="menu-btn p-3">
               <i className="fas fa-bars"></i>
             </button>
+           
+
             <div className="mobile-logo-wrapper align-items-center">
             <div>
                         <span className="you">You</span>
                         <span className="shop">Shop</span>
+                      
                     </div>
             </div>
             <div className="col-lg-4 nav_icon_right d-md-none">
@@ -56,15 +53,22 @@ function Nav(props) {
           </div>
         </div> 
                 </div>
-            </header>
-            <div className="youshop col-lg-12 col-md-12 p-0">
+            </header> 
+            <div className="youshop col-lg-12 col-md-12 p-0 site site--desktop-header--spaceship-one site--mobile-header--mobile-one">
+            <div className="text-center small d-md-none">
+ <span><i className="fas fa-map-marker-alt"></i> Dubai Festival City - Dubai</span>
+ </div> 
                 <div className="icon container pt-3 pb-3">
                     <div className="col-lg-4 d-none d-md-flex">
                     <div>
                         <span className="you">You</span>
                         <span className="shop">Shop</span>
+                       
                     </div>
               
+                    </div>
+                    <div>
+         
                     </div>
 
                     <div className="col-lg-4 col-sm-12">
@@ -83,7 +87,8 @@ function Nav(props) {
                      </div>
                 </div>
                 <div className="header3">
-                <div className="container pt-3 pb-3">
+                <div className="container pt-3 pb-3" style={{display:"flex"}}>
+                <span>  <Category className="support_icons"  label ={"All Category"}/></span>
                     <span><img src={Healthcare} className="support_icons" />&nbsp;&nbsp;Covid-19 Supplies</span>
                     <span><img src={Layer_8} className="support_icons" />&nbsp;&nbsp;Nearby Shops</span>
                     <span><img src={Help} className="support_icons" />&nbsp;&nbsp;Help</span>
@@ -112,6 +117,22 @@ function Nav(props) {
                  
                   className={`nav-item ${
                     true
+                      ? "selected"
+                      : ""
+                  }`}
+                >
+                  <Link
+             
+                    
+                    className="nav-link"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li
+                 
+                  className={`nav-item ${
+                    false
                       ? "selected"
                       : ""
                   }`}

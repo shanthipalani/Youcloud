@@ -59,9 +59,32 @@ function footer() {
                             <li>Conferences</li>
                             <li>Events by Country</li>
                         </ul>
-                        <div className="text-center">
-                            <p>Media Hub</p>
-                            <span className="mediahub_icons_align"><img src={Twitter} /><img src={Facebook} /><img src={Instagram} /></span>
+                        <div className="text-center text-md-left pl-md-5">
+                            <p className="mb-0">Media Hub</p>
+                            {/* <span className="mediahub_icons_align"></span> */}
+                        </div>
+                        <div className="d-flex justify-content-center justify-content-md-start pl-md-5">
+                      <div className="p-2">
+                      <button
+                            className="circle btn btn-link btn-sm"
+                          >
+                          <i class="fab fa-twitter"></i>
+                          </button>
+                      </div>
+                      <div className="p-2">
+                          <button
+                            className="circle btn btn-link btn-sm"
+                          >
+                          <i class="fab fa-facebook"></i>
+                          </button>
+                          </div>
+                          <div className="p-2">
+                          <button
+                            className="circle btn btn-link btn-sm"
+                          >
+                          <i class="fab fa-instagram"></i>
+                          </button>
+                          </div>
                         </div>
                     </div>
                 </div>

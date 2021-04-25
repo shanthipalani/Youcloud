@@ -9,8 +9,6 @@ class Password extends Component {
         return (<>
             <Nav />
             <div>
-                <Nav count={this.state.count}/>
-     
                 <div className="container-fluid pwd_recovery_form">
                     <section className="row align-items-center justify-content-center">
                     <div className=" col-12 col-md-8 col-xl-5">

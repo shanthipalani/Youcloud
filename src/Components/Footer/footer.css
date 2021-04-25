@@ -22,9 +22,10 @@ ul{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     width: 100%;
+    background-position: top;
 
 }
 
