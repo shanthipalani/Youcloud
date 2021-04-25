@@ -25,6 +25,7 @@ import {
     ClockCircleFilled,
   } from "@ant-design/icons";
 import "antd/dist/antd.css";
+import BlockHeader from './BlockHeader'
 
 const { TabPane } = Tabs;
 const Result = () => {
@@ -114,14 +115,23 @@ const Result = () => {
   )
 }
 const initialPanes = [
-  { title: 'Dubai', content:<div className="row pb-5">{Array(10).fill(null).map(() => <Result />)}</div>, key: '1' },
+  {country: "All Stores",
+listings: [{ title: 'Dubai', content:<div className="row pb-5">{Array(5).fill(null).map(() => <Result />)}</div>, key: '1' },
 { title: 'Al Karma', content: <div className="row pb-5">{Array(3).fill(null).map(() => <Result />)}</div>, key: '2' },
   {
     title: 'Abu dhabi',
     content: <div className="row pb-5">{Array(2).fill(null).map(() => <Result />)}</div>,
     key: '3',
     closable: false,
-  },
+  },]},
+  {country: "Dubai",
+  listings: [ 
+    { title: 'Al Karma', content: <div className="row pb-5">{Array(3).fill(null).map(() => <Result />)}</div>, key: '2' },
+   ]},
+    {country: "Abu dhabi",
+    listings: [
+      { title: 'Al Falah', content: <div className="row pb-5">{Array(3).fill(null).map(() => <Result />)}</div>, key: '2' },
+     ]}
 ];
 
 
@@ -295,7 +305,7 @@ class NearByStore extends React.Component {
             <div className="container-fluid signup_form">                
                 <section className="row">
                <div className="col-12 p-3 p-md-5 mx-md-5">
-               <Tabs
+               {/* <Tabs
         type="editable-card"
         onChange={this.onChange}
         activeKey={activeKey}
@@ -306,7 +316,30 @@ class NearByStore extends React.Component {
             {pane.content}
           </TabPane>
         ))}
-      </Tabs>
+      </Tabs> */}
+       <div className="card-container">
+         <BlockHeader  pageTitle="Search Near by Store"/>
+    <Tabs type="card">
+    {panes.map((value, index)=>(
+          
+          <TabPane tab={value.country} key={index}>
+                       <Tabs
+                    type="editable-card"
+                    onChange={this.onChange}
+                    activeKey={activeKey}
+                    onEdit={this.onEdit}
+                  >
+                  {value.listings.map(pane => (
+         
+              <TabPane tab={pane.title} key={pane.key} closable={pane.closable}>
+                {pane.content}
+              </TabPane>
+    
+            ))}          </Tabs>
+        </TabPane>
+            ))}
+    </Tabs>
+  </div>
                </div>
                 </section>
                 </div>

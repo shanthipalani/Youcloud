@@ -110,20 +110,7 @@ button {
         display: none !important;
       }
     }
-    .compare-package-icon-wrapper {
-      background-color: transparent;
-      position: absolute;
-      bottom: -15px;
-      right: -5px;
-      font-size: 30px;
-      i {
-        color: white;
-        text-shadow: 0 0 3px black !important;
-      }
-      .selected {
-        color: black !important;
-      }
-    }
+
     .package-img {
       height: 130px;
       border-top-right-radius: 10px;
@@ -133,21 +120,7 @@ button {
       background-position: center center;
       position: relative;
 
-      .trending {
-        display: flex;
-        position: absolute;
-        background-color: #ef5c0f;
-        padding: 3px;
-        border-radius: 5px;
-        color: white;
-        font-weight: bold;
-        font-size: 12px;
-
-        i {
-          color: white;
-          font-size: 12px;
-        }
-      }
+    
 
       .rating {
         display: flex;
@@ -161,39 +134,6 @@ button {
         .crown {
           color: white;
           font-size: 12px;
-        }
-      }
-
-      .premium {
-        display: flex;
-        position: absolute;
-        background-color: yellow;
-        padding: 3px;
-        border-radius: 5px;
-        color: white;
-        font-weight: bold;
-        font-size: 12px;
-
-        .crown {
-          color: white;
-          font-size: 12px;
-        }
-      }
-
-      .views {
-        display: flex;
-        position: absolute;
-        right: 0px;
-        padding: 3px;
-        border-radius: 5px;
-        background-color: rgba(74, 74, 74, 0.425);
-        color: white;
-        font-size: 11px;
-        font-weight: bold;
-
-        i {
-          color: white;
-          padding-top: 3px;
         }
       }
 
