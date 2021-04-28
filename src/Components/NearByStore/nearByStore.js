@@ -24,7 +24,6 @@ import {
     StarFilled,
     ClockCircleFilled,
   } from "@ant-design/icons";
-import "antd/dist/antd.css";
 import BlockHeader from './BlockHeader'
 
 const { TabPane } = Tabs;
@@ -319,7 +318,7 @@ class NearByStore extends React.Component {
       </Tabs> */}
        <div className="card-container">
          <BlockHeader  pageTitle="Search Near by Store"/>
-    <Tabs type="card">
+    <Tabs type="card" className="sub-tab">
     {panes.map((value, index)=>(
           
           <TabPane tab={value.country} key={index}>

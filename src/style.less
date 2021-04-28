@@ -1,0 +1,27 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~antd/dist/antd.less';
+
+
+.ant-tabs-nav .ant-tabs-tab .ant-tabs-tab-with-remove{
+    background-color: aqua;
+}
+
+
+
+.sub-tab{
+    .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab, .ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab {
+        background: #37D7CE !important;
+        border-radius: 30px !important;
+        border: none !important;
+    }
+    .ant-tabs-nav .ant-tabs-tab{
+        margin: 0;
+        padding: 8px 16px;
+        background: none !important;
+
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+  .ant-tabs-nav .ant-tabs-tab-active {
+    border-bottom: 2px solid black !important;
+    }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'; 
-import {  BiCartAlt, BiSearch, BiHelpCircle } from 'react-icons/bi' 
+import {  BiCartAlt, BiSearch, BiHelpCircle } from 'react-icons/bi' ;
+import { SmileTwoTone, HeartTwoTone, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
 import './nav.css' 
 import Pin from '../../Asset/images/pin.png'
 import Blogging from '../../Asset/images/blogging.png'
@@ -11,6 +12,7 @@ import Layer_8 from '../../Asset/images/Layer_8.png'
 import Healthcare from '../../Asset/images/Healthcare.png'
 import Help from '../../Asset/images/help.png'
  import Category from './category'
+ import { Badge } from 'antd';
 import { Link, useHistory } from "react-router-dom";
 
 function Nav(props) {
@@ -47,7 +49,8 @@ function Nav(props) {
                     </div>
             </div>
             <div className="col-lg-4 nav_icon_right d-md-none">
-                      <div className="pt-2 text-right"><span className="side_icons"><BiCartAlt /></span><span className="counter">1</span></div>
+                      <div className="pt-2 text-right">               <span className="side_icons"><UserOutlined /></span>
+                    <span className="side_icons">  <HeartTwoTone twoToneColor="#eb2f96" /></span><span className="side_icons px-2"><Badge count={5} size="small" style={{fontSize: 8}}><ShoppingCartOutlined style={{fontSize: 22}} /></Badge></span></div>
                     </div>
               
           </div>
@@ -59,7 +62,7 @@ function Nav(props) {
  <span><i className="fas fa-map-marker-alt"></i> Dubai Festival City - Dubai</span>
  </div> 
                 <div className="icon container pt-3 pb-3">
-                    <div className="col-lg-4 d-none d-md-flex">
+                    <div className="col-lg-2 d-none d-md-flex">
                     <div>
                         <span className="you">You</span>
                         <span className="shop">Shop</span>
@@ -67,11 +70,9 @@ function Nav(props) {
                     </div>
               
                     </div>
-                    <div>
          
-                    </div>
 
-                    <div className="col-lg-4 col-sm-12">
+                    <div className="col-lg-8 col-sm-12">
                     <form>
                         <div className="search_form">
                             <input className="search_input" type="text" name="place" placeholder="Dubai, AL Karama" />
@@ -80,11 +81,12 @@ function Nav(props) {
                     </form>
                     </div>
  
-                    <div className="col-lg-4 col-sm-12 nav_icon_right d-none d-md-flex">
-                        <span className="side_icons"><img src={ Usersmall }/></span>&nbsp;&nbsp;
-                    <span className="side_icons"><img src={Heart} alt="heart"/></span>&nbsp;&nbsp;
-                    <span className="side_icons"><img src={Cartsmall} /></span><span className="counter">1</span>
-                     </div>
+                    <div className="col-lg-2 col-sm-12 nav_icon_right d-none d-md-flex">
+
+            <span className="side_icons"><UserOutlined /></span>
+                    <span className="side_icons pl-2">  <HeartTwoTone twoToneColor="#eb2f96" /></span><span className="side_icons px-2"><Badge count={5} size="small" style={{fontSize: 10}}><ShoppingCartOutlined style={{fontSize: 25}} /></Badge></span></div>
+              
+              
                 </div>
                 <div className="header3">
                 <div className="container pt-3 pb-3" style={{display:"flex"}}>

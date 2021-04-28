@@ -18,6 +18,23 @@ body {
   height: 100%;
 }
 
+.ant-tabs-tab .ant-tabs-tab-with-remove .ant-tabs-tab-active{
+  border-radius: 20px;
+}
+
+.tabsContainer {
+  .ant-tabs-tab-active {
+      background: #fff266;
+      color: #31365c;
+      &:hover {
+          color: darken(#31365c, 5%);
+      }
+  }
+  .ant-tabs-ink-bar {
+      background: #fff266;
+  }
+}
+
 button {
   border: none;
   outline: none !important;
