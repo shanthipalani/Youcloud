@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body{
+    font-family:'Raleway' !important;
+}
+
+
+
+.recovery{
+    font-size: 20px;    
+    text-align: center;
+}
+
+.instruct{
+    text-align:center;
+    font-size: 14px;
+    
+    
+}
+
+
+
+
+.pwd_recovery_form{
+
+    background-color:rgb(234, 242, 245);
+     
+    background-size: cover;
+    
+}
+
+.form_border{
+    
+    border-radius: 25px;
+    margin: 40px 0;
+/*    
+    width: 650px !important; */
+    background-color: white;
+    box-shadow: 0 2px 2px 2px #ccc;
+    
+}
+
+.signin_func{
+    width: 200px !important;
+    height: 40px !important;
+    background-color:rgb(243, 250, 250);
+    border-radius: 20px;
+    color:#125E64 !important;
+    border-color: #125E64 !important;    
+}
+
+.backto_login_color{
+    color:#2DCCA9 !important;
+}
+
+input{
+    width:100%;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid rgb(238, 231, 231);
+}
+
+.emailaddress_color{
+    color:#092C4C;
+}
