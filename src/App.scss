@@ -22,6 +22,7 @@ body {
   border-radius: 20px;
 }
 
+
 .tabsContainer {
   .ant-tabs-tab-active {
       background: #fff266;
@@ -35,6 +36,76 @@ body {
   }
 }
 
+
+.product-page{
+  .banner{
+    height: 300px;
+    background-color: grey;
+    border-radius: 50px;
+  }
+
+  h3, p{
+    color: white;
+  }
+
+
+
+  .wishlist{
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    padding: 0px;
+    z-index: 101;
+    &.btn-warning{
+      background-color: #FA634D;
+      border-radius: 30px;
+      padding: 0px !important;
+      line-height: 0;
+    }
+  }
+}
+
+
+.productSwiper{
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+}
+
+.popular{
+  .custom-control {
+    padding-left: 0px;
+}
+  .custom-control-label::before, .custom-control-label::after {
+    position: absolute;
+    top: 10px !important;
+    left: 56px !important;
+}
+}
+
 button {
   border: none;
   outline: none !important;
@@ -43,6 +114,45 @@ button {
     height: 30px;
     width: 30px;
     background-color: #2CC5A4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    // -webkit-box-shadow: inset 0px 0px 0px 1.5px rgba(0, 0, 0, 0.8);
+    // -moz-box-shadow: inset 0px 0px 0px 1.5px rgba(0, 0, 0, 0.8);
+    // box-shadow: inset 0px 0px 0px 1.5px rgba(0, 0, 0, 0.8);
+    i{
+      color: white;
+    }
+    img {
+      margin: auto;
+      width: 18px;
+      height: 18px;
+      transition: 0.5s;
+    }
+
+    &:focus {
+      text-decoration: none;
+      -webkit-box-shadow: inset 0px 0px 0px 1.5px rgba(0, 0, 0, 0.8);
+      -moz-box-shadow: inset 0px 0px 0px 1.5px rgba(0, 0, 0, 0.8);
+      box-shadow: inset 0px 0px 0px 1.5px rgba(0, 0, 0, 0.8);
+    }
+    &:hover {
+      cursor: pointer;
+      transform: rotate(360deg);
+      box-shadow: inset 0px 0px 0px 1.5px black;
+      text-decoration: none;
+    }
+    &:active {
+      transform: scale(1.2);
+      box-shadow: inset 0px 0px 0px 1.5px black;
+    }
+  }
+  &.circle-lg {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-color: teal;
     display: flex;
     justify-content: center;
     align-items: center;
