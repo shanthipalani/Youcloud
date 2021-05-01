@@ -24,6 +24,10 @@ import { Switch, Route} from 'react-router-dom'
 import Nav from './Components/navigation/nav'
 import Shiporder from './Components/Shipment_order/shipmentorder'
 import Userprofile from './Components/UserProfile/userprofile'
+import Cart from './Components/Cart/cart'
+import Checkout from './Components/Cart/checkout'
+import Confirm from './Components/Cart/confirmation'
+
 
 
 
@@ -41,8 +45,11 @@ function App() {
           {/* <Form3/> */}
           {/* <Signup/> */}
           {/* <Password /> */}
-          {/* <NearByStore /> */}
-          {/* <Shiporder/> */}
+          {/* <NearByStore /> */}         
+          {/* <Cart />
+          <Checkout />
+          <Confirm /> */}
+          <Shiporder/>
           <Userprofile />
           {/* <Layout/> */}
          
