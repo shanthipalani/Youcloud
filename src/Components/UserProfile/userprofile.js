@@ -92,7 +92,7 @@ const userprofile = () => {
                             </div>
                         </div>
                         <div class="verticalLine">
-                            
+
                         </div>
                         <div className="col-lg-5 col-md-7">
                             
@@ -160,6 +160,9 @@ const userprofile = () => {
                         </div>
                     </div>
                 </section>
+            </div>
+            <div className="footer_gap">
+            <Footer />
             </div>
         </div>
     )
