@@ -1,0 +1,42 @@
+.delivered_fontcolor{
+    color: turquoise;
+}
+
+.view_invoice{
+    width: 130px;
+    background-color: #ececec;
+    padding: 10px;
+    border-radius: 50px;
+    color: #01332e;
+}
+
+.reorder_color{
+    width:130px;
+    background-color: turquoise;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+}
+
+.addtocart_size{
+    /* width: 130px; */
+    background-color: #2DCCA9;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+}
+
+.pagination_design {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+
+.search_now_content{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.searchnow_button{
+    border-radius: 2px;
+}
