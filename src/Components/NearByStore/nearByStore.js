@@ -1,4 +1,4 @@
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import React from 'react'
 import Rating from "react-rating";
@@ -6,26 +6,28 @@ import Nav from '../navigation/nav'
 import Footer from '../Footer/footer'
 import './nearByStore.css'
 import eye from '../../Asset/images/eye.png';
+import cell from '../../Asset/images/cell.png';
 import {
-    Typography,
-    Card,
-    Row,
-    Col,
-    Button,
-    Grid,
-    Input,
-    Space,
-    Divider,
-    Tabs,
-  } from "antd";
-  import {
-    HomeFilled,
-    MenuOutlined,
-    StarFilled,
-    ClockCircleFilled,
-  } from "@ant-design/icons";
+  Typography,
+  Card,
+  Row,
+  Col,
+  Button,
+  Grid,
+  Input,
+  Space,
+  Divider,
+  Tabs,
+} from "antd";
+import {
+  HomeFilled,
+  MenuOutlined,
+  StarFilled,
+  ClockCircleFilled,
+} from "@ant-design/icons";
 import BlockHeader from './BlockHeader'
 import { Slider, Select, Tag, Checkbox } from 'antd';
+import { SmileTwoTone, HeartFilled, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
 const { TabPane } = Tabs;
 const options = [{ value: 'gold' }, { value: 'lime' }, { value: 'green' }, { value: 'cyan' }];
 
@@ -49,126 +51,122 @@ function tagRender(props) {
 }
 
 
-function Result(props){
+function Result(props) {
   const [count, setCount] = useState(props.count > 6 ? 6 : props.count);
-return(  <>{Array(count).fill(null).slice(0, count).map(() => (
-      
-  <div className="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-  <div
-    className={`cards zoomable m-2`}
-  >
-    <Link
-      className="packages"
-      style={{
-        backgroundImage: `url("https://thumbs.dreamstime.com/z/view-al-maya-supermarket-dubai-marina-united-arab-emirates-mar-177530085.jpg")`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      }}
-    >
- 
+  return (<>{Array(count).fill(null).slice(0, count).map(() => (
+
+    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-2">
       <div
-        className="package-img"
-
+        className={`cards zoomable m-2`}
       >
-      </div>
-      <div className="ml-3 mr-5 p-3 info">
-      <div
-        className="pl-2 pt-1 location truncate"
-        style={{ maxWidth: 180 }}
-      >
-       
- 
-
-
-        <i className="fas fa-map-marker-alt pr-2"></i>
-        <span className="country">Al Maya Suppermarket</span>
-
-        <div className="tr-rating">
-            <Rating
-              emptySymbol="far fa-star empty-star-color"
-              fullSymbol="fas fa-star rated-star-color"
-              initialRating={4}
-              readonly={true}
-              start={0}
-              stop={5}
-              fractions={2}
-            />
-          </div>
-      </div>
-      <div className="package-desc">
-        <h4 className="pl-2 truncate">4.5 ratting</h4>
-
-        <div
-          className={`truncate-${
-            !false && true > 200
-              ? "trip"
-              : "block"
-          } pb-2`}
-  
+        <Link
+          className="packages"
+          style={{
+            backgroundImage: `url("https://i6.photo.2gis.com/images/branch/0/30258560057160906_31eb.jpg")`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
         >
-          <p className="px-2 mb-0" style={{ overflow: "hidden" }}>
-           Al Karama, Dubai
-          </p>
-          {!true && 100 > 200 ? (
-            <button
-              className="btn px-2"
-              style={{ fontSize: 12, color: "#42939D", zIndex: 2 }}
-              onClick={e => {
-                e.stopPropagation();
-                e.preventDefault();
-                // setreadMore(true);
-              }}
+
+          <div
+            className="package-img"
+
+          >
+          </div>
+          <div className="ml-2 mr-4 px-1 py-3 pb-4 info">
+            <div
+              className="pl-2 pt-1 location truncate"
             >
-              "Visit Now"
-            </button>
-          ) : null}
-        </div>
-      </div>
+              <span className="country">Al Maya Suppermarket</span>
 
-      <div className="discounted-price-tag pl-2 pt-0">
-       20
+              <div className="tr-rating d-flex w-100 flex-row pt-2">
+                <Rating
+                  emptySymbol="far fa-star empty-star-color"
+                  fullSymbol="fas fa-star rated-star-color"
+                  initialRating={1}
+                  readonly={true}
+                  start={0}
+                  stop={1}
+                  fractions={2}
+                />
+                <p className="text-muted pl-2 m-0">4.5 ratings</p>
+              </div>
+            </div>
+            <div className="package-desc">
 
+
+              <div
+                className={`truncate-${!false && true > 200
+                    ? "trip"
+                    : "block"
+                  } pb-2`}
+
+              >
+                <p className="pl-2 mb-0 text-muted pt-2" style={{ overflow: "hidden" }}>
+                  <i className="fas fa-map-marker-alt text-muted pr-2" style={{ paddingLeft: 1 }}></i>
+   Al Karama, Dubai
+          </p>
+                {!true && 100 > 200 ? (
+                  <button
+                    className="btn px-2"
+                    style={{ fontSize: 12, color: "#42939D", zIndex: 2 }}
+                    onClick={e => {
+                      e.stopPropagation();
+                      e.preventDefault();
+                      // setreadMore(true);
+                    }}
+                  >
+                    "Visit Now"
+                  </button>
+                ) : null}
+              </div>
+            </div>
+
+            <div className="discounted-price-tag pl-2 pt-0">
+              <img className="text-center" style={{ height: 30 }} src={require(`../../Asset/images/visitnow.png`).default} />
+              <small style={{ position: "absolute", top: "25%", left: 30 }}>Visit Now</small>
+
+            </div>
+
+          </div>
+
+          <div className="wishlist">
+            <HeartFilled style={{ color: "#FD7360", fontSize: 18 }} />
+          </div>
+
+        </Link>
       </div>
-    
-      </div>
-</Link>
-  </div>
-</div>
+    </div>
 
   ))}
-  {props.count > count ? <div class="d-grid gap-2 col-8 col-md-2 mx-auto pt-4">
-  <button class="btn btn-danger btn-block" type="button" onClick={() => setCount(count + 6)}>See More</button>
-</div> : props.count < 6 ? null : <div class="d-grid gap-2 col-8 col-md-2 mx-auto pt-4">
-  <button class="btn btn-success btn-block" type="button" onClick={() => setCount(6)}>See Less</button>
-</div>}
+    {props.count > count ? <div class="d-grid gap-2 col-8 col-md-2 mx-auto pt-5">
+      <div className="text-center" onClick={() => setCount(count + 6)}>Load More....</div>
+    </div> : null}
   </>
   )
 
 }
 
 const initialPanes = [
-  {country: "All Stores",
-listings: [{ title: 'Dubai', content:<div className="row pb-5"><Result count={16}/></div>, key: '1' },
-{ title: 'Al Karma', content: <div className="row pb-5"><Result count={12}/></div>, key: '2' },
   {
-    title: 'Abu dhabi',
-    content: <div className="row pb-5"><Result count={18}/></div>,
-    key: '3',
-    closable: false,
-  },{
-    title: 'Oman',
-    content: <div className="row pb-5"><Result count={4}/></div>,
-    key: '4',
-    closable: false,
-  },]},
-  {country: "Dubai",
-  listings: [ 
-    { title: 'Al Karma', content: <div className="row pb-5"><Result count={5}/></div>, key: '2' },
-   ]},
-    {country: "Abu dhabi",
+    country: "All Stores", key: '0',
     listings: [
-      { title: 'Al Falah', content: <div className="row pb-5"><Result count={14}/></div>, key: '2' },
-     ]}
+      { title: 'Dubai', content: <div className="row pb-5"><Result count={16} /></div>, key: '0' },
+      { title: 'Al Karma', content: <div className="row pb-5"><Result count={4} /></div>, key: '1' }
+    ]
+  },
+  {
+    country: "Dubai", key: '1',
+    listings: [
+      { title: 'Al Karma', content: <div className="row pb-5"><Result count={5} /></div>, key: '0' },
+    ]
+  },
+  {
+    country: "Abu dhabi", key: '2',
+    listings: [
+      { title: 'Al Falah', content: <div className="row pb-5"><Result count={14} /></div>, key: '0' },
+    ]
+  }
 ];
 
 
@@ -225,16 +223,18 @@ class NearByStore extends React.Component {
 
   render() {
 
+
     const { panes, activeKey } = this.state;
+    console.log(activeKey);
     const plainOptions = ['Value 1', 'Value 2', 'Value 3'];
     return (
       <>
-          
-                <Nav  hasCategory={true} />
-            <div className="container-fluid signup_form">                
-                <section className="row">
-               <div className="col-12 p-3 p-md-5">
-               {/* <Tabs
+
+        <Nav hasCategory={false} />
+        <div className="container-fluid">
+          <section className="row">
+            <div className="col-12 px-3 px-md-5 pt-md-5 pb-0">
+              {/* <Tabs
         type="editable-card"
         onChange={this.onChange}
         activeKey={activeKey}
@@ -246,76 +246,105 @@ class NearByStore extends React.Component {
           </TabPane>
         ))}
       </Tabs> */}
-       <div className="card-container">
-         <BlockHeader  pageTitle="Search Near by Store"/>
-         <div class="d-grid gap-2 col-8 col-md-2 mx-auto pb-2 flex-column d-md-none">
-  <button class="btn btn-success btn-block btn-sm"  onClick={() => this.setState({
-                              showFilter: !this.state.showFilter
-                            })} type="button" style={{backgroundColor: "teal"}}> <i class="fas fa-sort-amount-down fa-lg"></i> Filter</button>
-</div>
-<div className={`row mt-4 border-bottom ${this.state.showFilter ? "" : "d-none"}`}>
-  <div className="col-12 col-md-6 px-5 py-3">
-    <p className="h5"><b>Price</b></p>
-  <Slider defaultValue={30} disabled={false} />
-  <Select
-    mode="multiple"
-    showArrow
-    tagRender={tagRender}
-    defaultValue={['gold', 'cyan']}
-    style={{ width: '100%' }}
-    options={options}
-  />
-  </div>
-  <div className="col-12 col-md-6 px-5 py-3 d-flex flex-column">
-  <p className="h5"><b>Category</b></p>
-  <Checkbox.Group className="py-2" options={plainOptions} defaultValue={['Value 1']}  />
-  <Checkbox.Group className="py-2" options={plainOptions} defaultValue={['Value 1']}  />
+              <div className="card-container">
+                <div className="row">
+                  <div className="col-12 pl-4 pt-5 pt-md-0">
+                    <h3 className="m-0">Search Nearby Stores</h3>
+                  </div>
+                </div>
+                <div class="d-grid gap-2 col-8 col-md-2 mx-auto pb-2 pt-3 flex-column d-md-none">
+                  <button class="btn btn-success btn-block btn-sm" onClick={() => this.setState({
+                    showFilter: !this.state.showFilter
+                  })} type="button" style={{ backgroundColor: "teal" }}> <i class="fas fa-sort-amount-down fa-lg"></i> Filter</button>
+                </div>
+                <div className={`row mt-4 border-bottom ${this.state.showFilter ? "" : "d-none"}`}>
+                  <div className="col-12 col-md-6 px-5 py-3">
+                    <p className="h5"><b>Price</b></p>
+                    <Slider defaultValue={30} disabled={false} />
+                    <Select
+                      mode="multiple"
+                      showArrow
+                      tagRender={tagRender}
+                      defaultValue={['gold', 'cyan']}
+                      style={{ width: '100%' }}
+                      options={options}
+                    />
+                  </div>
+                  <div className="col-12 col-md-6 px-5 py-3 d-flex flex-column">
+                    <p className="h5"><b>Category</b></p>
+                    <Checkbox.Group className="py-2" options={plainOptions} defaultValue={['Value 1']} />
+                    <Checkbox.Group className="py-2" options={plainOptions} defaultValue={['Value 1']} />
 
-  </div>
+                  </div>
 
-  <div class="d-grid gap-2 col-8 col-md-2 mx-auto pt-4 mb-3">
-  <button class="btn btn-success btn-block btn-sm" type="button" onClick={() => this.setState({
-                              showFilter: !this.state.showFilter
-                            })} >Apply Filter</button>
-</div>
-</div>
+                  <div class="d-grid gap-2 col-8 col-md-2 mx-auto pt-4 mb-3">
+                    <button class="btn btn-success btn-block btn-sm" type="button" onClick={() => this.setState({
+                      showFilter: !this.state.showFilter
+                    })} >Apply Filter</button>
 
-    <Tabs type="card" className="sub-tab">
-    {panes.map((value, index)=>(
-          
-          <TabPane tab={value.country} key={index}>
-                       <Tabs
-                    type="editable-card"
-                    onChange={this.onChange}
-                    activeKey={activeKey}
-                    onEdit={this.onEdit}
-                  >
-                  {value.listings.map(pane => (
-         
-              <TabPane tab={pane.title} key={pane.key} closable={pane.closable}>
-                {pane.content}
-              </TabPane>
-    
-            ))}          </Tabs>
-        </TabPane>
-            ))}
+                  </div>
+                </div>
 
+                <Tabs type="card" className="sub-tab">
+                  {panes.map((value, index) => (
+
+                    <TabPane tab={value.country} key={index} tab={<div className={`${activeKey == index ? 'main-tab' : ""}`}>{value.country}</div>}>
+                      <Tabs
+                        type="editable-card"
+                        hideAdd
+                        onChange={this.onChange}
+                        activeKey={activeKey}
+
+                      >
+                        {value.listings.map(pane => (
+
+                          <TabPane tab={pane.title} key={pane.key} closable={pane.closable}>
+                            {pane.content}
+                          </TabPane>
+
+                        ))}          </Tabs>
+                    </TabPane>
+                  ))}
+                  {/* 
                           <button
                             className="circle-lg btn btn-link d-none d-md-block" onClick={() => this.setState({
                               showFilter: !this.state.showFilter
                             })} style={{position: 'absolute', top: 100, right: 80}}
                           >
                          <i class="fas fa-sort-amount-down fa-lg"></i>
-                          </button>
-                 
-    </Tabs>
-    
-  </div>
-               </div>
-                </section>
-                </div>
- 
-      <Footer />
+                          </button> */}
+
+                  <img className="d-none d-md-block" style={{ height: 100, width: 100, position: "absolute", top: 40, right: 80 }} onClick={() => this.setState({
+                    showFilter: !this.state.showFilter
+                  })} src={require(`../../Asset/images/filterBtn.png`).default} />
+
+                </Tabs>
+
+                <div className="row h-100 mobile_view_1 pt-4">
+                            <div className=" mobile_img-1 col-lg-6">
+                                <div className="row">
+                                    <img src={cell} alt="Phone" />
+                                </div>
+                            </div>
+                            <div className="col-12 col-lg-6 d-flex justify-content-center align-items-start flex-column">
+                              <h3>Get YouShop App</h3>
+                              <p>Search for products/services and connect with verified sellers on the go!</p>
+                              <div className="w-100 d-flex justify-content-center justify-content-md-start align-item-center">
+                              <img className="" style={{ height: 45 }} src={require(`../../Asset/images/androidios.png`).default} />
+                              </div>
+                              <div className="pt-4 w-100 d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center">
+                              <input type="email" name="email" id="email" placeholder="Enter address" style={{width: 225, backgroundColor: "#EDF0F7", borderRadius: 25}} />
+                              <img className="text-center ml-3 my-3 " style={{ height: 42,  borderRadius: 20, boxShadow: "-3px 3px 22px -7px #6b6b6b" }} src={require(`../../Asset/images/send.png`).default} />
+                              </div>
+                            </div>
+                            </div>
+
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <Footer />
       </>
     );
   }

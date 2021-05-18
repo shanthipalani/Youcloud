@@ -52,8 +52,12 @@ function Category(props ) {
 
     return (
         <div className={classes} ref={rootRef}>
-            <button className="departments__button" type="button" onClick={handleButtonClick}>
-                <span className="departments__button-icon">
+            <div className="category-button d-flex justify-content-start align-items-center" type="div" onClick={handleButtonClick}>
+            <span className="p-3 pl-md-4 m-0" style={{fill: "white"}}>
+                     <Menu16x12Svg />    
+                
+                </span> <span className="d-none d-md-block">All Categories</span>
+                {/* <span className="departments__button-icon">
                      <Menu16x12Svg />    
                 
                 </span>
@@ -63,8 +67,8 @@ function Category(props ) {
                 <span className="departments__button-arrow">
                      <ArrowRoundedDown9x6Svg /> 
                    
-                </span>
-            </button>
+                </span> */}
+            </div>
             <div className="departments__menu">
                 <div className="departments__arrow" />
                 <div className="departments__body" onMouseLeave={handleBodyMouseLeave}>

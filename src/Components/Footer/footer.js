@@ -15,7 +15,8 @@ function footer() {
     return (
 
             <footer className="footer_background container-fluid">
-                <div className="row py-3 text-white pt-4">
+                <div className="row py-5 text-white">
+                    <div className="col-12 py-3"></div>
                     <div className="col-12 col-md list_1">
                         <ul>
                             <li>About us</li>
@@ -89,9 +90,9 @@ function footer() {
                     </div>
                 </div>
                 <hr />
-                <div className="copyright_content d-flex px-4 pb-3">
-                    <span>Copyright <AiFillCopyrightCircle />1996-2021 YouShop Ltd. All rights reserved</span>
-                    <span>Terms of Use - Privacy Policy - Link to Us</span>
+                <div className="copyright_content d-flex flex-column text-center flex-md-row px-md-4 pb-3">
+                    <small>Copyright © 1996-2021 YouShop Ltd. All rights reserved</small>
+                    <small>Terms of Use - Privacy Policy - Link to Us</small>
                 </div>
             </footer>
       

@@ -22,11 +22,11 @@ body{
 
 .nav-2 {
     padding: 5px 0px;
-    background-color: teal;   
+    background-color: #1B949D;   
 }
 
 .counter{
-    background-color: teal;
+    background-color: #1B949D;
     padding: 1px 8px 2px 8px;
     color: white;
     border-radius: 50px;
@@ -36,19 +36,19 @@ body{
     display: flex;
     justify-content: space-between;
     margin: auto auto;
-    border-bottom: 2px solid #e9ecef;   
+    border-bottom: 2px solid #f1f1f1;   
     
 }
 
 .you{
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
-    color:teal;
+    color:#1B949D;
     font-family:Arial, Helvetica, sans-serif;
 }
 
 .shop{
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     color:black;
     font-family:Arial, Helvetica, sans-serif;
@@ -56,6 +56,7 @@ body{
 
 .search_form{
     display: flex;
+    margin-top: 4px;
 }
 
 .header3 {
@@ -76,7 +77,7 @@ body{
 }
 
 .search{
-    background-color: teal;
+    background-color: #1B949D;
     width: 15%;
     height: 40px;
     border-radius: 0px 4px 4px 0px;
@@ -91,23 +92,39 @@ body{
 
 .side_icons{
     font-size: 22px;
-    padding: 0px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .support_icons{
-    font-size: 25px;
-    color: teal;
+    /* height: 25px; */
+    color: #1B949D;
+
 }
+
+
 
     .nav_icon_right {
         text-align: right;
     }
 
-@media (min-width: 1400px) {
-.container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1340px !important;
-}
-}
+
+    span.htabs{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+
+@media only screen and (max-width: 600px) {
+    span.htabs{
+        display: flex;
+     justify-content: center;
+     align-items: center;
+       
+      font-size: 12px;
+    }
+  }
 
 @media (max-width: 767px) {
     .footer_content {

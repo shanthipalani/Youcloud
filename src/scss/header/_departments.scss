@@ -110,7 +110,8 @@
         }
     }
     .departments__button-icon {
-        top: 10px;
+        top: 38%;
+        left: 15px !important;
         position: absolute;
         fill: currentColor;
         display: inline-block;
@@ -173,6 +174,8 @@
         padding: 0;
         font-size: 15px;
         line-height: 20px;
+        width: 260px;
+        z-index: 103;
 
         @include scheme-font-weight($departments-menu-scheme, opposite, $font-weight-medium);
     }
@@ -257,7 +260,7 @@
 
 
     @if($header-layout == spaceship) {
-        @include media-breakpoint-only(xl) {
+        @include media-breakpoint-down(md) {
             .departments__button {
                 height: 32px;
                 display: block;

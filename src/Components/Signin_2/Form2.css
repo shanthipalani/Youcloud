@@ -115,7 +115,7 @@ input:focus {
 }
 
 hr{
-        border: 1px solid #E1E1E1 !important;
+        border: 1px solid #31615559  !important;
 }
 
 .welcome_back{    
@@ -159,7 +159,7 @@ hr{
 
 
 hr{
-        border: 1px solid #E1E1E1 !important;
+        border: 1px solid #31615559  !important;
     }  
 
 .dont_have_an_accountsize{
@@ -184,5 +184,6 @@ hr{
     
     ::placeholder{
         color:#ABB3BB;
-        font-size: 15px;
+        font-size: 12px;
+        padding-left: 6px;
     }    

@@ -484,7 +484,7 @@ class ProductPage extends React.Component {
             </div>
             <div className="col-12">
               <div className="row px-md-5 mx-md-4">
-                <div className="col-12 col-md-9">
+                {/* <div className="col-12 col-md-9">
                 <div className="row d-flex justify-content-center justify-content-md-start pl-md-5 ml-md-5 icons py-2">
                       {[
                         {label: "Product Categories"},{label: "Payment & Services"}, {label: "Voucher & Discounts"}
@@ -506,8 +506,8 @@ class ProductPage extends React.Component {
                         );
                       })}
                     </div>
-                </div>
-                <div className="col-12 col-md-6 col-xl-3">
+                </div> */}
+                <div className="col-12 col-lg-4">
                   <div
                     className={`cards m-2`}
                   >
@@ -558,9 +558,9 @@ class ProductPage extends React.Component {
               </div>
 
             </div>
-             <div className="col-12 col-xl-10 mx-auto p-0 productSwiper px-md-5">
+             {/* <div className="col-12 col-xl-10 mx-auto p-0 productSwiper px-md-5">
                <ProductSwiper />
-             </div>
+             </div> */}
              <div className="col-12 col-xl-10 mx-auto pt-5 popular">
                <div className="row d-flex w-100 justify-content-between flex-nowrap" style={{overflowX: 'auto'}}>
                {[
