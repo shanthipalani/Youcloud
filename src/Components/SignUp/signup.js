@@ -88,8 +88,9 @@ class signup extends Component {
                             <div>
                                 <label htmlFor="country"><strong>Country</strong></label><br />
                                 <div className="position-relative">
-                                    <input type="country" placeholder="Select Country" ></input>
-                                <select id="country" name="country" className="position-absolute country_place" >
+                                    {/* <input type="country" placeholder="Select Country" ></input> */}
+                                <select id="country" name="country" className="password_place_position" >
+                                    <option value="" selected disabled >Select Country</option>
                                     <option value="Afganistan">Afghanistan</option>
                                     <option value="Albania">Albania</option>
                                     <option value="Algeria">Algeria</option>

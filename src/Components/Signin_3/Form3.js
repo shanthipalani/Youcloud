@@ -93,7 +93,7 @@ class Form3 extends Component {
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <div className="row d-flex justify-content-end">
-                                                        <a className="forgot_password_color" href="/Forgot Password">Forgot Password?</a>
+                                                        <a className="forgot_password_color" href="/forgotpassword">Forgot Password?</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -116,7 +116,7 @@ class Form3 extends Component {
                                     <button className="buttonstyle_google"><img src={Fb} className="google_icon" />&nbsp;Continue with Facebook</button>
                                 </div>
                                 <div className="newaccount">
-                                    <p>Don't Have an Account?<a className="Signup_buttoncolor" href="/Sign Up">&nbsp; Sign Up</a></p>
+                                    <p>Don't Have an Account?<a className="Signup_buttoncolor" href="/SignUp">&nbsp; Sign Up</a></p>
                                 </div>
                             </div>
                       
