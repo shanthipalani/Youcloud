@@ -1,3 +1,8 @@
+.bodyfont {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+
 .viewinvoice_colorsize{
     color: #125E64 !important;
     font-size: 25px;
@@ -27,6 +32,26 @@
     margin-top: 70px;
 }
 
+.hrlinedotted{
+    border-top: 3px dotted black !important;
+}
+
+.slicehrline{
+    margin-left: 400px;
+    width: 50%;
+    border-top: 3px dotted black !important;
+}
+
+
+.grossamount {
+    justify-content: space-between
+    /* width: 100%; */
+}
+
+.contentborder {
+    border: 2px solid black;
+    align-items: center;
+}
 /* .invoice_content{
     display: flex;
     align-items:flex-end;
