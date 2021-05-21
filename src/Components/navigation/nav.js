@@ -27,15 +27,14 @@ function Nav(props) {
         <div className="nav-2 d-none d-md-flex">
           <div className="head-2 container">
 
-            <span><img src={Pin} className="pr-2" style={{ height: 14 }} /><small>Dubai Festival City - Dubai</small></span>
-            <span><img src={Blogging} className="pr-2" style={{ height: 12 }} /><small className="pr-4">Blog</small>
+            <span><img src={Pin} className="pr-2" style={{ height: 14 }} /><small>Dubai Festival City - Dubai</small></span> 
             {props.purchase ? (<>
               <img src={Shield} className="pr-2" style={{ height: 14 }} /><small className="pr-4">Guarantee</small>
               <img src={CreditCard} className="pr-2" style={{ height: 14 }} /><small className="pr-4">Payment</small>
               <img src={Truck} className="pr-2" style={{ height: 14 }} /><small className="pr-4">Delivery</small>
             </>): null}
             
-            <img src={User} className="pr-2" style={{ height: 14 }} /><small className="pr-4">Register or Sign in</small></span>
+             <span><img src={Blogging} className="pr-2" style={{ height: 12 }} /><small className="pr-3">Blog</small><img src={User} className="pr-2" style={{ height: 14 }} /><small className="pr-3"><a className="signinbuttoncolor" href="/SignIn">Register or Sign in</a></small></span>
           </div>
         </div>
 
@@ -101,8 +100,9 @@ function Nav(props) {
 
             <div className="col-lg-2 col-md-4 col-sm-12 nav_icon_right d-none d-md-flex">
 
-              <span className="side_icons">  <img src={Usersmall} className="pr-md-4" style={{ height: 18 }} /></span>
-              <span className="side_icons pl-2">  <img src={Heart} className="pr-md-4" style={{ height: 18 }} /></span><span className="side_icons px-2"><Badge count={5} size="large" style={{ fontSize: 10, top: 6, background: "#57bf86" }}> <img src={Cartsmall} className="pr-3 " style={{ height: 18 }} /></Badge></span>
+              <span className="side_icons"> <a href="/Userprofile"> <img src={Usersmall} className="pr-md-4" style={{ height: 18 }} /></a></span>
+              <span className="side_icons pl-2">  <img src={Heart} className="pr-md-4" style={{ height: 18 }} /></span>
+              <span className="side_icons px-2"><Badge count={5} size="large" style={{ fontSize: 10, top: 6, background: "#57bf86" }}> <a href="/Cart"> <img src={Cartsmall} className="pr-3 " style={{ height: 18 }} /></a></Badge></span>
             </div>
           </div>
 
