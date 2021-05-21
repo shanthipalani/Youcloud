@@ -13,6 +13,7 @@ import phoneoutlet from '../../Asset/images/phoneoutlet.png'
 import trackman from '../../Asset/images/trackman.png'
 import waiting from '../../Asset/images/waiting.png'
 import dot from '../../Asset/images/dot.png'
+import Orangeflag from '../../Asset/images/orangeflag.png'
 
 
 
@@ -70,7 +71,7 @@ const shiporder = () => {
                             </div>
                             <div>
                                 <p className="tracker">
-                                    <span><img src={greentick} alt="greentick" width="32.2px" height="32.2px" /></span>
+                                    <span><img src={Orangeflag} alt="greentick" width="26px" height="26px" /></span>
                                     <span className="tracker_content">Your Address</span>
                                     <span className="tracker_content1">About 5.35</span>
                                 </p>
