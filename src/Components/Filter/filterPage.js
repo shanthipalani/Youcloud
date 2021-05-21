@@ -509,7 +509,7 @@ function FilterPage() {
                       <div className="py-3">
                         <p>Frido Ultra Comfortable Copper</p>
                         <h6>$1.659,00</h6>
-                        <span class="badge rounded-pill bg-info text-dark px-3">Info</span>
+                        <span class="badge rounded-pill text-dark px-3">Info</span>
                       </div>
                       <div className="w-100 px-2">
                         <button className="btn btn-sm btn-warning btn-block">

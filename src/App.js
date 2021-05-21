@@ -42,11 +42,11 @@ function App() {
           <Route path="/forgotpassword" exact component={Password} />
           <Route path="/SignUp" exact component={Signup}/>
           <Route path="/SignIn" exact component={Form}/> */}
-          {/* <ProductDetailPage /> */}
+          <ProductDetailPage />
           {/* <Form2/> */}
           {/* <Form3/> */}
           {/* <Signup/> */}
-          <ProductPage />
+          {/* <ProductPage /> */}
           {/* <NearByStore /> */}
           {/* <FilterPage /> */}
           {/* <Layout/> */}

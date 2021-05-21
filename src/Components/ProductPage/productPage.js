@@ -33,60 +33,84 @@ import RelatedProductSwiper from '../shared/RelatedProduct'
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const { TabPane } = Tabs;
 
-const ProductSwiper = () => {
+const Carousel = () => {
   return (
     <Swiper
-      spaceBetween={30}
-      slidesPerView={3}
-      pagination={{ clickable: true }}
-      breakpoints={
-        {
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-          },
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20
-          },
-    
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 0
-          }
-        }
-      }
-     activeSlideKey={(key) => console.log(key)}
-     onActiveIndexChange={(key) => console.log(key)}
+      pagination={{ clickable: true, renderBullet: (index, className) => `<span class="bar swiper-pagination-bullet"></span>` }}
     >
-      <SwiperSlide key={1}>   <img className="w-100 swipe-ele" src={require(`../../Asset/images/promo1.png`).default}/></SwiperSlide>
-      <SwiperSlide key={2}>   <img className="w-100 swipe-ele" src={require(`../../Asset/images/promo2.png`).default}/></SwiperSlide>
-      <SwiperSlide key={3}>   <img className="w-100 swipe-ele" src={require(`../../Asset/images/promo3.png`).default}/></SwiperSlide>
-      <SwiperSlide key={4}>Slide 4</SwiperSlide>
+      <SwiperSlide className="pt-2 pb-4"  key={1}>              <div className="w-100 banner" style={{
+              backgroundImage: `url("https://www.arabianbusiness.com/public/images/2019/08/20/Carrefour.jpg")`,
+              backgroundPosition: "top",
+              backgroundSize: "cover",
+            }}>
+              <div className="d-flex h-100 justify-content-start align-items-center ">
+                <div className="p-5">
+                  <h3>Covid19 Safety Kit</h3>
+                  <p>Search nearby stores | deliver as fast as possible</p>
+                  <button type="button" class="btn-custom-success my-3">Shop Now<img className="ml-2" src={require(`../../Asset/images/arrow.png`).default} style={{height: 18}} /></button>
+                </div>
+              </div>
+
+              <button className="btn-warning wishlist btn-lg"><i class="far fa-heart" style={{ color: "white" }}></i></button>
+
+            </div></SwiperSlide>
+            <SwiperSlide className="pt-2 pb-4"  key={2}>              <div className="w-100 banner" style={{
+              backgroundImage: `url("https://www.arabianbusiness.com/public/images/2019/08/20/Carrefour.jpg")`,
+              backgroundPosition: "top",
+              backgroundSize: "cover",
+            }}>
+              <div className="d-flex h-100 justify-content-start align-items-center ">
+                <div className="p-5">
+                  <h3>Covid19  Kit</h3>
+                  <p>Search nearby stores | deliver as fast as possible</p>
+                  <button type="button" class="btn-custom-success my-3">Shop Now<img className="ml-2" src={require(`../../Asset/images/arrow.png`).default} style={{height: 18}} /></button>
+                </div>
+              </div>
+
+              <button className="btn-warning wishlist btn-lg"><i class="far fa-heart" style={{ color: "white" }}></i></button>
+
+            </div></SwiperSlide>
+            <SwiperSlide className="pt-2 pb-4"  key={3}>              <div className="w-100 banner" style={{
+              backgroundImage: `url("https://www.arabianbusiness.com/public/images/2019/08/20/Carrefour.jpg")`,
+              backgroundPosition: "top",
+              backgroundSize: "cover",
+            }}>
+              <div className="d-flex h-100 justify-content-start align-items-center ">
+                <div className="p-5">
+                  <h3>Covid19 Safety Kit</h3>
+                  <p>Search nearby stores | deliver as fast as possible</p>
+                  <button type="button" class="btn-custom-success my-3">Shop Now<img className="ml-2" src={require(`../../Asset/images/arrow.png`).default} style={{height: 18}} /></button>
+                </div>
+              </div>
+
+              <button className="btn-warning wishlist btn-lg"><i class="far fa-heart" style={{ color: "white" }}></i></button>
+
+            </div></SwiperSlide>
     </Swiper>
   );
 };
 
 
 
-const Bestsellers = () => {
+const Bestsellers = props => {
   return (
     <Swiper
       spaceBetween={30}
       slidesPerView={3}
+      navigation
       breakpoints={
         {
-          768: {
+          1920: {
+            slidesPerView: 8,
+            spaceBetween: 50,
+          },
+          1024: {
             slidesPerView: 6,
             spaceBetween: 40,
           },
-          1024: {
-            slidesPerView: 8,
-            spaceBetween: 50,
+          992: {
+            slidesPerView: 4,
+            spaceBetween: 20
           },
           640: {
             slidesPerView: 3,
@@ -94,32 +118,39 @@ const Bestsellers = () => {
           },
     
           320: {
-            slidesPerView: 1,
-            spaceBetween: 0
+            slidesPerView: 2,
+            spaceBetween: 20
           }
         }
       }
      activeSlideKey={(key) => console.log(key)}
      onActiveIndexChange={(key) => console.log(key)}
-    >
+    >       
        {Array(8).fill(null).map((index) => (
         <SwiperSlide key={index}><div className="product pb-3">
-        <div className="w-100" style={{height: "50%", backgroundColor: "#E7E9EB", borderRadius: 20}}></div>
+        <div className="w-100" style={{height: 210, backgroundColor: "#E7E9EB", borderRadius: 20}}></div>
         <div className="promobadge">
-        <div className="leftbadge">New</div>
-        <div className="leftbadge2">Hot</div>
+        <div className="leftbadge">NEW</div>
+        <div className="leftbadge2">HOT</div>
         </div>
         
-        <div className="w-100 px-4">
-        <div className="py-3">
-          <p>Frido Ultra Comfortable Copper</p>
+        <div className="w-100">
+        <div className="py-2">
+          <p className="py-1">Frido Ultra Comfortable Copper</p>
           <h6>$1.659,00</h6>
-          <span class="badge rounded-pill bg-info text-dark px-3">Info</span>
+          <div className="d-flex w-100 justify-content-between px-1">
+          <span class="badge rounded-pill px-2 py-1">CHAIRS</span>
+          <div style={{fontSize: 8}}><i className="far fa-dot-circle px-1" style={{}}></i>
+          <i className="fas fa-circle px-1" style={{color: "#726865"}}></i>
+          <i className="fas fa-circle px-1" style={{}}></i>
+          <i className="fas fa-circle px-1" style={{color: "#383D52"}}></i>
+          </div>
+          </div>
+
         </div>
-        <div className="w-100 px-2">
-        <button className="btn btn-sm btn-warning btn-block">
-          Add to cart
-        </button>
+        <div className="w-100">
+        <button type="button" class="btn-custom-secondary"><img className="mr-2" src={require(`../../Asset/images/cart2.png`).default} style={{height: 18}} />Add to cart</button>
+
         </div>
  
         </div>
@@ -127,6 +158,80 @@ const Bestsellers = () => {
       
         </div></SwiperSlide>
       ))}
+       <h4 style={{position: "absolute", top: 20}}>Bestsellers</h4>
+    </Swiper>
+  );
+};
+
+const MostPurchase = props => {
+  return (
+    <Swiper
+      spaceBetween={30}
+      slidesPerView={3}
+      navigation
+      breakpoints={
+        {
+          1920: {
+            slidesPerView: 8,
+            spaceBetween: 50,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 40,
+          },
+          992: {
+            slidesPerView: 4,
+            spaceBetween: 20
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 20
+          },
+    
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          }
+        }
+      }
+     activeSlideKey={(key) => console.log(key)}
+     onActiveIndexChange={(key) => console.log(key)}
+    >       
+       {Array(8).fill(null).map((index) => (
+        <SwiperSlide key={index}><div className="product pb-3">
+        <div className="w-100" style={{height: 210, backgroundColor: "#E7E9EB", borderRadius: 20}}></div>
+        <div className="promobadge">
+        <div className="leftbadge">NEW</div>
+        </div>
+        
+        <div className="w-100">
+        <div className="py-2">
+          <p className="py-1">Pouf Oval Faded Velvet</p>
+          <div className="d-flex flex-row">
+          <h6 style={{color: "red"}}>$499,00</h6>
+          <h6 className="pl-3" style={{fontWeight: "normal"}}><del>$899.00</del></h6>
+          </div>
+          <div className="d-flex w-100 justify-content-between px-1">
+          <span class="badge rounded-pill px-2 py-1">POUFS</span>
+          <div style={{fontSize: 8}}>
+          <i className="fas fa-circle px-1" style={{color: "#726865"}}></i>
+          <i className="far fa-dot-circle px-1" style={{}}></i>
+          <i className="fas fa-circle px-1" style={{color: "#383D52"}}></i>
+          </div>
+          </div>
+
+        </div>
+        <div className="w-100">
+        <button type="button" class="btn-custom-secondary"><img className="mr-2" src={require(`../../Asset/images/cart2.png`).default} style={{height: 18}} />Add to cart</button>
+
+        </div>
+ 
+        </div>
+       
+      
+        </div></SwiperSlide>
+      ))}
+       <h4 style={{position: "absolute", top: 20}}>Most Purchased</h4>
     </Swiper>
   );
 };
@@ -346,7 +451,7 @@ const initialPanes = [
 //               dir="ltr"
 //               className="flex items-center justify-center pt-10 load-more"
 //             >
-//               <p className="text-white flex items-center bg-red-500 py-4 px-10 text-lg">
+//               <p className="text-white flex items-center bg-red-500 pt-2 pb-4 px-10 text-lg">
 //                 Load More 
 //               </p>
 //             </div>
@@ -457,33 +562,21 @@ class ProductPage extends React.Component {
     return (
       <>
    <IntlProvider locale={'en'} messages={{TEXT_SKU:'SKU ',TEXT_RATING_LABEL:"{reviews, plural, =0 {No reviews} one {{reviews} review} other {{reviews} reviews}}",BUTTON_ADD_TO_CART:'Add To Cart',BUTTON_ADD_TO_WISHLIST:'Add To Wishlist'}}>
-        <Nav hasCategory={true} />
+        <Nav hasCategory={true} storeName={"carrefour hypermarket online store"} purchase={true} />
         <div className="container-fluid product-page">
-          <div className="row px-md-5 pt-3">
+          <div className="container">
+          <div className="row pt-3">
 
-            <div className="col-9 py-2  text-left"><pre className="mb-0">Home {' > '} Supermarket {' > '} Dubai {' > '} Festival City {' > '} Carrefour Hypermarket</pre></div>
-            <div className="col-3 py-2 text-right"><i class="fas fa-share" style={{ color: "teal" }}></i><span> Share</span></div>
+<div className="col-9 py-2  text-left"><pre className="mb-0">Home {' > '} Supermarket {' > '} Dubai {' > '} Festival City {' > '} Carrefour Hypermarket</pre></div>
+<div className="col-3 py-2 text-right"><i class="fas fa-share" style={{ color: "teal" }}></i><span> Share</span></div>
 
+</div>
+<div className="row">
+<div className="col-12 px-0 carousel">
+          <Carousel />
           </div>
-          <div className="row p-3">
-            <div className="col-12 col-md-10 mx-auto banner" style={{
-              backgroundImage: `url("https://www.arabianbusiness.com/public/images/2019/08/20/Carrefour.jpg")`,
-              backgroundPosition: "top",
-              backgroundSize: "cover",
-            }}>
-              <div className="d-flex h-100 justify-content-start align-items-center ">
-                <div className="p-5">
-                  <h3>Covid19 Safety Kit</h3>
-                  <p>Search nearby stores | deliver as fast as possible</p>
-                  <button type="button" class="btn btn-success my-3">Shop Now <i class="fas fa-long-arrow-alt-right" style={{ color: "white" }}></i></button>
-                </div>
-              </div>
-
-              <button className="btn-warning wishlist btn-lg"><i class="far fa-heart" style={{ color: "white" }}></i></button>
-
-            </div>
-            <div className="col-12">
-              <div className="row px-md-5 mx-md-4">
+          <div className="col-12">
+              <div className="row px-md-5">
                 {/* <div className="col-12 col-md-9">
                 <div className="row d-flex justify-content-center justify-content-md-start pl-md-5 ml-md-5 icons py-2">
                       {[
@@ -507,7 +600,7 @@ class ProductPage extends React.Component {
                       })}
                     </div>
                 </div> */}
-                <div className="col-12 col-lg-4">
+                <div className="col-12 col">
                   <div
                     className={`cards m-2`}
                   >
@@ -515,40 +608,45 @@ class ProductPage extends React.Component {
                       className="packages"
                     >
 
-                      <div className="ml-md-3 mr-md-5 p-md-3 info">
+                      <div className=" info">
                         <div
                           className="pt-1 location truncate"
                         >
                           <span className="country">Carrefour Hypermarket</span>
-                          <div className="d-flex justify-content-between">
-                            <div className="tr-rating d-flex flex-row">
+              
+                         <div className="d-flex flex-row">
+                         <div className="d-flex flex-column">
+                            <div className="tr-rating d-flex flex-row py-2">
                               <Rating
-                                emptySymbol="far fa-star empty-star-color"
-                                fullSymbol="fas fa-star rated-star-color"
+                                emptySymbol="far fa-star empty-star-color2"
+                                fullSymbol="fas fa-star rated-star-color2"
                                 initialRating={4}
                                 readonly={true}
                                 start={0}
                                 stop={5}
                                 fractions={2}
                               />
-                              <small className="pl-2 truncate">4.5 rating</small>
+                              <p className="pl-2 text-dark m-0" style={{fontWeight: "bold"}}>4.0</p>
                             </div>
 
-                            <div style={{ color: "green" }}>see review</div>
-                          </div>
-
-                          <div className="d-flex justify-content-between">
                             <div>
                               <p className="mb-0" style={{ overflow: "hidden", color: 'black' }}>
-                                1.5 Km     Dubai Festival City
+                              <i class="fas fa-map-marker-alt pr-2"></i>1.5 Km  .   Dubai Festival City
           </p>
 
                             </div>
 
-                            <div><i class="far fa-clock fa-sm"></i><small>  30 Minutes</small></div>
+         
                           </div>
 
+                          <div className="d-flex flex-column pl-5 text-right">
+                    
+                            <div className="py-2" style={{ color: "#15D55D", fontWeight: "bold" }}>See review</div>
 
+                            <div><i class="far fa-clock pr-3"></i>24/7 hour working</div>
+                          </div>
+
+                         </div>
                         </div>
                       </div>
                     </div>
@@ -558,10 +656,15 @@ class ProductPage extends React.Component {
               </div>
 
             </div>
-             {/* <div className="col-12 col-xl-10 mx-auto p-0 productSwiper px-md-5">
+        
+</div>
+          </div>
+  
+          <div className="row px-3 pb-5 mb-5">
+     {/* <div className="col-12 col-xl-10 mx-auto p-0 productSwiper px-md-5">
                <ProductSwiper />
              </div> */}
-             <div className="col-12 col-xl-10 mx-auto pt-5 popular">
+             <div className="col-12 col-xl-10 mx-auto popular">
                <div className="row d-flex w-100 justify-content-between flex-nowrap" style={{overflowX: 'auto'}}>
                {[
                         {label: "Covid 19"},{label: "Medicine"}, {label: "Healthy"},
@@ -593,17 +696,17 @@ class ProductPage extends React.Component {
            
 
              </div>
-             <div className="col-12 py-3 pt-5">
+             {/* <div className="col-12 py-3 pt-5">
                <h4>Related Products</h4>
              </div>
              <div className="col-12 related-product" style={{overflow: "hidden"}}>
              <RelatedProductSwiper />
-             </div>
-             <div className="col-12 py-3 pt-5">
-               <h4>Bestsellers</h4>
-             </div>
-             <div className="col-12 bestseller">
+             </div> */}
+             <div className="col-12 bestseller pt-4">
                <Bestsellers />
+             </div>
+             <div className="col-12 bestseller pt-4">
+               <MostPurchase />
              </div>
              {/* <div className="col-12" style={{overflow: "hidden"}}>
              <BlockSpace layout="divider-nl" />

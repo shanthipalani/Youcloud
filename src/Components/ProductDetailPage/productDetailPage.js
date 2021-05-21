@@ -75,13 +75,13 @@ const ProductImage = () => {
       spaceBetween={30}
       slidesPerView={1}
       navigation
-      pagination={{ clickable: true }}
+      loop={true}
       activeSlideKey={(key) => console.log(key)}
       onActiveIndexChange={(key) => console.log(key)}
     >
       <SwiperSlide key={1}><div className="imageContainer" style={{
                     backgroundImage: `url('${require("../../Asset/images/mask.jpg").default}')`,
-                    backgroundPosition: "center",
+                    backgroundPosition: "center center",
                     backgroundSize: "cover",
       }}></div></SwiperSlide>
       <SwiperSlide key={2}><div className="imageContainer"></div></SwiperSlide>
@@ -296,15 +296,15 @@ function ProductDetailPage() {
 
   return (
     <>
-      <Nav hasCategory={true} />
+      <Nav hasCategory={false} />
       <div className="container-fluid product-detail">
         <div className="row px-md-5 pt-3">
 
           <div className="col-9 py-2  text-left">
-            <Breadcrumb separator=">">
+            <Breadcrumb separator=">" style={{fontSize: 12}}>
               <Breadcrumb.Item>Home</Breadcrumb.Item>
               <Breadcrumb.Item href=""> Health Care</Breadcrumb.Item>
-              <Breadcrumb.Item href="">Application List</Breadcrumb.Item>
+              <Breadcrumb.Item href="">Home Medical Supplies</Breadcrumb.Item>
               <Breadcrumb.Item>NEA N95 / KN95 FFP2</Breadcrumb.Item>
             </Breadcrumb>
           </div>
@@ -318,10 +318,10 @@ function ProductDetailPage() {
                 <ProductImage />
               </div>
               <div className="col-12 col-md-6 product-info p-1 p-md-2 px-xl-5">
-                <span class="badge rounded-pill bg-info px-2 text-light my-3">ONLY 2 LEFT</span>
+                <span class="badge rounded-pill px-2 py-2 my-2" style={{fontSize: 10}}>ONLY 2 LEFT</span>
                 <h3>NEA N95 / KN95 FFP2 5 Layer...</h3>
                 <h5>$1.629,00</h5>
-                <small>Seller : Nassem Al Madina Supermarket, Dubai</small>
+                <p className="mb-0">Seller : <span style={{color: "#125E64"}}>Nassem Al Madina Supermarket, Dubai</span></p>
                 <div><small>SKU: 1938302145 </small></div>
 
                 <div className="d-flex flex-column p-md-4 p-2 mt-2" style={{ backgroundColor: "#F4F5F6", borderRadius: 10 }}>
@@ -339,6 +339,9 @@ function ProductDetailPage() {
                         </DropdownMenu>
                       </UncontrolledButtonDropdown>
                     </div>
+              <div className="sepBar">
+              <i className="far fa-window-minimize fa-rotate-90 fa-lg d-none d-lg-flex"></i>
+              </div>
                     <div className="d-flex flex-column align-items-center">
                       <small className="pb-2">MATERIAL</small>
                       <UncontrolledButtonDropdown>
@@ -352,6 +355,9 @@ function ProductDetailPage() {
                         </DropdownMenu>
                       </UncontrolledButtonDropdown>
                     </div>
+                    <div className="sepBar">
+              <i className="far fa-window-minimize fa-rotate-90 fa-lg d-none d-lg-flex"></i>
+              </div>
                     <div className="d-flex flex-column align-items-center">
                       <small className="pb-2">QTY</small>
                       <ButtonGroup>
@@ -360,6 +366,9 @@ function ProductDetailPage() {
                         <Button className="qbutton">+</Button>
                       </ButtonGroup>
                     </div>
+                    <div className="sepBar">
+              <i className="far fa-window-minimize fa-rotate-90 fa-lg d-none d-lg-flex"></i>
+              </div>
                     <div className="d-flex flex-column align-items-center">
                       <div className="mt-4"></div>
                       <ButtonGroup>
@@ -369,12 +378,10 @@ function ProductDetailPage() {
                   </div>
                   <div className="d-flex flex-column flex-md-row w-100 mt-4 justify-content-around">
 
-                    <button className="btn btn-light w-100 mx-lg-4 my-1" style={{ borderRadius: 20, backgroundColor: '#d4d4d4' }}>
-                      <i className="fas fa-shopping-cart pr-2"></i>Add to cart
-          </button>
-                    <button className="btn  btn-success w-100 mx-lg-4 my-1" style={{ borderRadius: 20 }}>
-                      Buy Now
-          </button>
+                  <button type="button" class="btn-custom-secondary mx-lg-4 my-1"><img className="mr-2" src={require(`../../Asset/images/cart2.png`).default} style={{height: 18}} />Add to cart</button>
+
+                  <button type="button" class="btn-custom-success2 mx-lg-4 my-1"><img className="mr-2" src={require(`../../Asset/images/bag.png`).default} style={{height: 18}} />Buy Now</button>
+
                   </div>
                 </div>
                 <div className="d-flex flex-row flex-wrap p-3">

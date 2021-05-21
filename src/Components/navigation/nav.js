@@ -10,6 +10,9 @@ import Usersmall from '../../Asset/images/Usersmall.png'
 import Cartsmall from '../../Asset/images/Cartsmall.png'
 import Layer_8 from '../../Asset/images/Layer_8.png'
 import Healthcare from '../../Asset/images/Healthcare.png'
+import Truck from '../../Asset/images/delivery-truck.png'
+import Shield from '../../Asset/images/shield.png'
+import CreditCard from '../../Asset/images/credit-card.png'
 import Help from '../../Asset/images/help.png'
 import Category from './category'
 import { Badge } from 'antd';
@@ -25,7 +28,14 @@ function Nav(props) {
           <div className="head-2 container">
 
             <span><img src={Pin} className="pr-2" style={{ height: 14 }} /><small>Dubai Festival City - Dubai</small></span>
-            <span><img src={Blogging} className="pr-2" style={{ height: 12 }} /><small className="pr-3">Blog</small><img src={User} className="pr-2" style={{ height: 14 }} /><small className="pr-3">Register or Sign in</small></span>
+            <span><img src={Blogging} className="pr-2" style={{ height: 12 }} /><small className="pr-4">Blog</small>
+            {props.purchase ? (<>
+              <img src={Shield} className="pr-2" style={{ height: 14 }} /><small className="pr-4">Guarantee</small>
+              <img src={CreditCard} className="pr-2" style={{ height: 14 }} /><small className="pr-4">Payment</small>
+              <img src={Truck} className="pr-2" style={{ height: 14 }} /><small className="pr-4">Delivery</small>
+            </>): null}
+            
+            <img src={User} className="pr-2" style={{ height: 14 }} /><small className="pr-4">Register or Sign in</small></span>
           </div>
         </div>
 
@@ -62,16 +72,22 @@ function Nav(props) {
         <div className="text-center small d-md-none">
           <span><i className="fas fa-map-marker-alt"></i> Dubai Festival City - Dubai</span>
         </div>
-        <div className="icon navcontainer container pt-3 pb-3">
-          <div className="row w-100">
+        <div className="icon navcontainer container pt-2 pb-3">
+          <div className="row w-100 m-0">
             <div className="col-lg-2 col-4 d-none d-md-flex">
               <div className="">
                 <span className="you">You</span>
                 <span className="shop">Shop</span>
 
               </div>
-
             </div>
+
+            {props.storeName != null ?   <div className="col-lg-2 col-12">
+                   <div>
+                <small>{props.storeName}</small>
+              </div>
+
+            </div> : null}
 
 
             <div className="col-md-4 col-lg-6 mx-auto col-sm-12">
