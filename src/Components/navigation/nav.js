@@ -20,6 +20,7 @@ import { Link, useHistory } from "react-router-dom";
 
 function Nav(props) {
   const [isOpen, setIsOpen] = React.useState(false);
+  let history = useHistory();
   return (
     <>
 
@@ -27,14 +28,15 @@ function Nav(props) {
         <div className="nav-2 d-none d-md-flex">
           <div className="head-2 container">
 
-            <span><img src={Pin} className="pr-2" style={{ height: 14 }} /><small>Dubai Festival City - Dubai</small></span> 
+            <span><Link to="/"><img src={Pin} className="pr-2" style={{ height: 14 }} /></Link><small>Dubai Festival City - Dubai</small></span>
+            <span><img src={Blogging} className="pr-2" style={{ height: 12 }} /><small className="pr-4">Blog</small>
             {props.purchase ? (<>
               <img src={Shield} className="pr-2" style={{ height: 14 }} /><small className="pr-4">Guarantee</small>
               <img src={CreditCard} className="pr-2" style={{ height: 14 }} /><small className="pr-4">Payment</small>
               <img src={Truck} className="pr-2" style={{ height: 14 }} /><small className="pr-4">Delivery</small>
             </>): null}
             
-             <span><img src={Blogging} className="pr-2" style={{ height: 12 }} /><small className="pr-3">Blog</small><img src={User} className="pr-2" style={{ height: 14 }} /><small className="pr-3"><a className="signinbuttoncolor" href="/SignIn">Register or Sign in</a></small></span>
+            <Link to="Signin" style={{color: "white"}}><img src={User} className="pr-2" style={{ height: 14 }} /><small className="pr-4">Register or Sign in</small></Link></span>
           </div>
         </div>
 
@@ -51,11 +53,11 @@ function Nav(props) {
 
 
               <div className="mobile-logo-wrapper align-items-center">
-                <div>
+                <Link to="/">
                   <span className="you">You</span>
                   <span className="shop">Shop</span>
 
-                </div>
+                </Link>
               </div>
               <div className="col-lg-4 nav_icon_right d-md-none d-flex flex-row justify-content-end">
                 <span className="side_icons"> <img src={Usersmall} className="pr-3" style={{ height: 16 }} /></span>
@@ -74,11 +76,11 @@ function Nav(props) {
         <div className="icon navcontainer container pt-2 pb-3">
           <div className="row w-100 m-0">
             <div className="col-lg-2 col-4 d-none d-md-flex">
-              <div className="">
+              <Link to="/" className="">
                 <span className="you">You</span>
                 <span className="shop">Shop</span>
 
-              </div>
+              </Link>
             </div>
 
             {props.storeName != null ?   <div className="col-lg-2 col-12">
@@ -90,19 +92,18 @@ function Nav(props) {
 
 
             <div className="col-md-4 col-lg-6 mx-auto col-sm-12">
-              <form>
+              <form onSubmit={() =>  history.push("Search")}>
                 <div className="search_form">
                   <input className="search_input" type="text" name="place" placeholder="Dubai, AL Karama" />
-                  <button className="search"><BiSearch /></button>
+                  <button type="submit" className="search"><BiSearch /></button>
                 </div>
               </form>
             </div>
 
             <div className="col-lg-2 col-md-4 col-sm-12 nav_icon_right d-none d-md-flex">
 
-              <span className="side_icons"> <a href="/Userprofile"> <img src={Usersmall} className="pr-md-4" style={{ height: 18 }} /></a></span>
-              <span className="side_icons pl-2">  <img src={Heart} className="pr-md-4" style={{ height: 18 }} /></span>
-              <span className="side_icons px-2"><Badge count={5} size="large" style={{ fontSize: 10, top: 6, background: "#57bf86" }}> <a href="/Cart"> <img src={Cartsmall} className="pr-3 " style={{ height: 18 }} /></a></Badge></span>
+              <span className="side_icons">  <img src={Usersmall} className="pr-md-4" style={{ height: 18 }} /></span>
+              <span className="side_icons pl-2">  <img src={Heart} className="pr-md-4" style={{ height: 18 }} /></span><span className="side_icons px-2"><Badge count={5} size="large" style={{ fontSize: 10, top: 6, background: "#57bf86" }}> <img src={Cartsmall} className="pr-3 " style={{ height: 18 }} /></Badge></span>
             </div>
           </div>
 

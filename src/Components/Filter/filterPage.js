@@ -23,7 +23,7 @@ import { DownOutlined, UserOutlined } from '@ant-design/icons';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import RelatedProductSwiper from '../shared/RelatedProduct'
-import Bestsellers from '../shared/BestsellerSwiper'
+import Bestsellers from '../shared/Bestseller'
 import { UncontrolledButtonDropdown, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, ButtonGroup } from 'reactstrap';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const { Panel } = Collapse;
@@ -498,39 +498,44 @@ function FilterPage() {
             </div>
             <div className="row">
               {Array(18).fill(null).map((index, item) => (
-                <div className="col-6 col-md-4 col-lg-3 col-xl-2 py-3">
-                  <div className="product pb-3">
+                <div className="col-6 col-md-4 col-lg-3 col-xl-2 py-4">
+                  <div className="filterproduct pb-3">
                     <div className="w-100" style={{ height: "100%", backgroundColor: "#E7E9EB", borderRadius: 20 }}></div>
                     <div className="promobadge">
-                      <div className="leftbadge">New</div>
-                      <div className="leftbadge2">Hot</div>
+                      <div className="leftbadge">NEW</div>
+                      <div className="leftbadge2">HOT</div>
                     </div>
-                    <div className="w-100 px-2">
-                      <div className="py-3">
-                        <p>Frido Ultra Comfortable Copper</p>
+                    <div className="w-100">
+                      <div className="py-2">
+                        <p className="py-1">Modern Sofa</p>
                         <h6>$1.659,00</h6>
-                        <span class="badge rounded-pill text-dark px-3">Info</span>
+                        <div className="d-flex w-100 justify-content-between px-1">
+                          <span class="badge rounded-pill px-2 py-1">CHAIRS</span>
+                          <div style={{ fontSize: 8 }}><i className="far fa-dot-circle px-1" style={{}}></i>
+                            <i className="fas fa-circle px-1" style={{ color: "#726865" }}></i>
+                            <i className="fas fa-circle px-1" style={{}}></i>
+                            <i className="fas fa-circle px-1" style={{ color: "#383D52" }}></i>
+                          </div>
+                        </div>
+
                       </div>
-                      <div className="w-100 px-2">
-                        <button className="btn btn-sm btn-warning btn-block">
-                          Add to cart
-                      </button>
+                      <div className="w-100">
+                        <button type="button" class="btn-custom-secondary"><img className="mr-2" src={require(`../../Asset/images/cart2.png`).default} style={{ height: 16 }} />Add to cart</button>
+
                       </div>
+
                     </div>
                   </div>
                 </div>
               ))}
             </div>
             <div className="mt-4 d-md-none">
-                  <img className="w-100" src={require(`../../Asset/images/ad.png`).default} style={{ height: 400, objectFit: "contain" }} />
-                </div>
+              <img className="w-100" src={require(`../../Asset/images/ad.png`).default} style={{ height: 400, objectFit: "contain" }} />
+            </div>
           </div>
         </div>
-        <div className="row p-3">
-          <div className="col-12 py-3 pt-5">
-            <h4>Bestsellers</h4>
-          </div>
-          <div className="col-12 bestseller">
+        <div className="row p-3 pb-5">
+          <div className="col-12 bestseller pt-4">
             <Bestsellers />
           </div>
         </div>

@@ -108,6 +108,7 @@ body {
 .related-product{
   .swiper-wrapper{
     margin-bottom: 50px;
+    padding-top: 80px;
   }
   .swiper-pagination {
     display: flex !important;
@@ -133,33 +134,54 @@ body {
   .swiper-slide{
     transition: transform .5s;
     .product{
-      height: 300px;
       border-radius: 20px;
-      background-color: #E7E9EB;
+      background-color:white;
       position: relative;
       display: flex;
       align-items: flex-start;
       justify-content: flex-end;
       flex-direction: column;
-      p{color: gray;}
+      p{color: gray; font-size: 12px; margin: auto;}
+      h6{
+        font-weight: bold;
+      }
       .btn-warning{
         border-radius: 15px;
         background-color: white;
       }
-      .leftbadge{
+      .promobadge{
         position: absolute;
         top: 0;
         left: 0;
-        padding: 8px;
-        background-color: red;
+        display: inline-flex;
         border-bottom-right-radius: 20px;
-        border-top-left-radius: 20px;
-        color: white;
-        font-size: 8px;
+        border-top-left-radius: 22px;
+        background-color: red;
+        font-weight: bolder;
+        .leftbadge{
+          background-color: red;
+          border-bottom-right-radius: 20px;
+          border-top-left-radius: 20px;
+          color: white;
+          font-size: 10px;
+          padding: 6px 10px;
+        }
+        .leftbadge2{
+          background-color: red;
+          border-bottom-right-radius: 20px;
+          color: white;
+          font-size: 10px;
+          padding: 6px 10px 4px 8px;
+        }
+      
       }
     }
   }
+
   .swiper-slide-active{
+    .product{
+
+    }
     transition: transform .5s;
     @media only screen and (min-width: 768px) {
       width: calc(100% / 8) !important;
@@ -177,8 +199,14 @@ body {
   width: calc(100% / 4) !important;
 }
 
+@media only screen and (min-width: 1280px) {
+  width: calc(100% / 4) !important;
+  margin-right: 60px !important;
+}
+
 @media only screen and (min-width: 1920px) {
-  width: calc(100% / 6) !important;
+  width: calc(100% / 4.5) !important;
+  margin-right: 60px !important;
 }
 
     .btn{
@@ -280,8 +308,8 @@ body {
 }
 
 .product-filter{
-  .product{
-    height: 400px;
+  .filterproduct{
+    height: 350px;
     border-radius: 20px;
     background-color:white;
     position: relative;
@@ -289,7 +317,7 @@ body {
     align-items: flex-start;
     justify-content: flex-end;
     flex-direction: column;
-    p{color: gray;}
+    p{color: gray; font-size: 12px; margin: auto;}
     .btn-warning{
       border-radius: 15px;
       background-color: white;
@@ -304,7 +332,7 @@ body {
       background-color: red;
       font-weight: bolder;
       .leftbadge{
-        background-color: rgb(26, 243, 189);
+        background-color: #29D2C8;
         border-bottom-right-radius: 20px;
         border-top-left-radius: 20px;
         color: white;
@@ -541,7 +569,7 @@ body {
       height: calc((100% - 30px) / 2);
       border-radius: 20px;
     
-     
+      box-shadow: 0px 4px 28px -16px #989898;
     }
 
     

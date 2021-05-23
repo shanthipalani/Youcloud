@@ -26,7 +26,7 @@ import {
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import RelatedProductSwiper from '../shared/RelatedProduct'
-import Bestsellers from '../shared/BestsellerSwiper'
+import Bestsellers from '../shared/Bestseller'
 import { UncontrolledButtonDropdown, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, ButtonGroup, Button } from 'reactstrap';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const { TabPane } = Tabs;
@@ -314,7 +314,7 @@ function ProductDetailPage() {
         <div className="row p-3 pb-md-5">
           <div className="col-12 col-xl-10 mx-xl-auto">
             <div className="row">
-              <div className="col-12 col-md-6 productImage">
+              <div className="col-12 col-md-6 px-0 productImage">
                 <ProductImage />
               </div>
               <div className="col-12 col-md-6 product-info p-1 p-md-2 px-xl-5">
@@ -324,7 +324,7 @@ function ProductDetailPage() {
                 <p className="mb-0">Seller : <span style={{color: "#125E64"}}>Nassem Al Madina Supermarket, Dubai</span></p>
                 <div><small>SKU: 1938302145 </small></div>
 
-                <div className="d-flex flex-column p-md-4 p-2 mt-2" style={{ backgroundColor: "#F4F5F6", borderRadius: 10 }}>
+                <div className="d-flex flex-column p-md-4 py-3 p-md-2 mt-2" style={{ backgroundColor: "#F4F5F6", borderRadius: 10 }}>
                   <div className="d-flex flex-row product-buttons justify-content-around">
                     <div className="d-flex flex-column align-items-center">
                       <small className="pb-2">COLOR</small>
@@ -376,11 +376,16 @@ function ProductDetailPage() {
                       </ButtonGroup>
                     </div>
                   </div>
-                  <div className="d-flex flex-column flex-md-row w-100 mt-4 justify-content-around">
+                  <div className="d-flex flex-column flex-md-row w-100 mt-4 align-items-center">
 
-                  <button type="button" class="btn-custom-secondary mx-lg-4 my-1"><img className="mr-2" src={require(`../../Asset/images/cart2.png`).default} style={{height: 18}} />Add to cart</button>
+<div className="mx-md-4" style={{width: 240}}>
+<button type="button" class="btn-custom-secondary my-1"><img className="mr-2" src={require(`../../Asset/images/cart2.png`).default} style={{height: 18}} />Add to cart</button>
 
-                  <button type="button" class="btn-custom-success2 mx-lg-4 my-1"><img className="mr-2" src={require(`../../Asset/images/bag.png`).default} style={{height: 18}} />Buy Now</button>
+</div>
+<div style={{width: 240}}>
+<button type="button" class="btn-custom-success2  my-1" ><img className="mr-2" src={require(`../../Asset/images/bag.png`).default} style={{height: 18}} />Buy Now</button>
+
+</div>
 
                   </div>
                 </div>
@@ -486,20 +491,14 @@ Air-purifying Respirator, Ear Mount</p>
           </div>
         </div>
         <div className="row p-3">
-          <div className="col-12 py-3 pt-5">
-            <h4>Related Products</h4>
-          </div>
-          <div className="col-12 related-product" style={{ overflow: "hidden" }}>
+          <div className="col-12 related-product px-md-5" style={{ overflow: "hidden" }}>
             <RelatedProductSwiper />
           </div>
         </div>
         <div className="row p-3">
-          <div className="col-12 py-3 pt-5">
-            <h4>Bestsellers</h4>
-          </div>
-          <div className="col-12 bestseller">
-            <Bestsellers />
-          </div>
+        <div className="col-12 bestseller pb-5 px-md-5">
+               <Bestsellers />
+             </div>
         </div>
 
 

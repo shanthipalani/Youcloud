@@ -23,50 +23,38 @@ import Form3 from './Components/Signin_3/Form3'
 import Signup from './Components/SignUp/signup'
 import NearByStore from './Components/NearByStore/nearByStore'
 import ProductPage from './Components/ProductPage/productPage'
-// import Layout from './Components/layout/layout'
+import Layout from './Components/layout/layout'
 import Password from './Components/Password_recovery/pwd'
 import ProductDetailPage from './Components/ProductDetailPage/productDetailPage'
 import FilterPage from './Components/Filter/filterPage'
 import { Switch, Route} from 'react-router-dom'
-// import Nav from './Components/navigation/nav'
-import Cart from './Components/Cart/cart'
-import Checkout from './Components/Cart/checkout'
-import Confirmation from './Components/Cart/confirmation'
-import Shiporder from './Components/Shipment_order/shipmentorder';
-import Userprofile from './Components/Userprofile/userprofile'
-import Invoice from './Components/Invoice/invoice'
+import Nav from './Components/navigation/nav'
+
 
 
 function App() {
   return (
 
       <div>
-        
-        <Switch>
-          <Route path='/' exact><Form></Form></Route>
+        {/* <Form/> */}
+       <Switch>
+          <Route path='/' exact component={ProductPage} ></Route>
           <Route path="/forgotpassword" exact component={Password} />
-          <Route path="/SignUp" exact component={Signup}/>
-          <Route path="/SignIn" exact component={Form}/>
-          <Route path="/Userprofile" exact component={Userprofile}/>
-          <Route path="/Cart" exact component={Cart}/>
-        </Switch>
-          {/* <Form/> */}
-          <Form2/>
-          <Form3/>
-          <Signup/>
-          <Password />
-          <NearByStore />
-          <ProductPage />
-          <ProductDetailPage />          
-          <FilterPage />
-          <Cart />
-          <Checkout />
-          <Confirmation />
-          <Shiporder />
-          <Userprofile />
-          <Invoice />
-          
-        
+          <Route path="/Signin" exact component={Form2}/> 
+          <Route path="/Signup" exact component={Signup}/> 
+          <Route path="/Search" exact component={NearByStore}/> 
+          <Route path="/Product" exact component={ProductDetailPage}/> 
+          <Route path="/Filter" exact component={FilterPage}/> 
+          <ProductDetailPage />
+          <Form />
+          <Form2/> 
+          <Form3/>  
+          <ProductPage /> 
+          <NearByStore /> 
+          <FilterPage /> 
+          <Layout/> 
+          <Password /> 
+         </Switch> 
     </div>
 
   );
