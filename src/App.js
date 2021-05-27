@@ -35,6 +35,9 @@ import Confirmation from './Components/Cart/confirmation'
 import Shiporder from './Components/Shipment_order/shipmentorder';
 import Userprofile from './Components/Userprofile/userprofile'
 import Invoice from './Components/Invoice/invoice'
+import Card from './Components/Card/carddetail'
+import Creditcard from './Components/Card/creditcard'
+import Debitcard from './Components/Card/debitcard'
 
 
 function App() {
@@ -51,7 +54,7 @@ function App() {
           <Route path="/Cart" exact component={Cart}/>
         </Switch>
           {/* <Form/> */}
-          <Form2/>
+          {/* <Form2/>
           <Form3/>
           <Signup/>
           <Password />
@@ -65,11 +68,13 @@ function App() {
           <Shiporder />
           <Userprofile />
           <Invoice />
-          
+          <Card /> */}
+          <Creditcard/>
+          <Debitcard />
         
     </div>
 
   );
 }
 
-export default App;
+export default App

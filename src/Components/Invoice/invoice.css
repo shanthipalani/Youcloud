@@ -1,3 +1,11 @@
+/* @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body{
+    font-family:'Raleway' !important;
+} */
+
+
+
 .bodyfont {
     font-family:Arial, Helvetica, sans-serif
 }
@@ -15,8 +23,9 @@
 
 .contentborderwidth{
     max-width: 800px !important;
-    border: 1px solid gray;
+    border: 1px solid #707070 !important;
     padding: 50px 40px !important;
+    margin-left: 400px;
 
 }
 
@@ -52,48 +61,72 @@
     border: 2px solid black;
     align-items: center;
 }
+
+.backbutton{
+    color: #11293B;
+    width: 160px;
+    height: 50px;
+    border-radius: 40px;
+}
+
+.printnowbutton{
+    color: #FFFFFF;
+    width: 160px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: #2DCCA9;
+
+}
+
+.buttonbelowcontent{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
 /* .invoice_content{
     display: flex;
     align-items:flex-end;
-} */
+}  */
 
-/* .invoiceplace{
+ /* .invoiceplace{
     display: flex;
     align-items:center
-}
+} */
 
-.ns{
+/* .ns{
     
     text-align:center
-}
+} */
 
 .invoicecontent{
     display: flex;
     justify-content: space-evenly
 }
 
-.ns span{
+/* .ns span{
     display: block;
-}
+} */
 
-.linedotted{
+/* .linedotted{
     border-top: 2px dotted black;
-}
+} */
 
-.linedotted span{
+/* .linedotted span{
     display: block;
-}
+} */
 
-.contentborderwidth{
+/* .contentborderwidth{
     max-width: 700px !important;
     border: 1px solid gray;
     padding: 10px 100px !important;
 
-}
+} */
 
 
 
-.bottombuttons{
+/* .bottombuttons{
     display: flex;
     justify-content:space-evenly
 } */
