@@ -3,10 +3,8 @@ import "./invoice.css";
 import Nav from "../navigation/nav";
 import Footer from "../Footer/footer";
 // import jsPDF from "jspdf";
-import YouCloudlogo from '../../Asset/images/help.png'
-//'../../Asset/images/YouCloudlogo.png'
-import favicon from '../../Asset/images/help.png'
-//'../../Asset/images/favicon.png'
+import YouCloudlogo from  '../../Asset/images/YouCloudlogo.png'
+import favicon from  '../../Asset/images/favicon.png'
 
 const invoice = () => {
   return (
