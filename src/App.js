@@ -35,7 +35,8 @@ import Cart from './Components/Cart/cart'
 import Checkout from './Components/Cart/checkout'
 import Confirmation from './Components/Cart/confirmation'
 import Shiporder from './Components/Shipment_order/shipmentorder';
-import Userprofile from './Components/Userprofile/userprofile'
+//import Userprofile from './Components/Userprofile/userprofile'
+
 import Invoice from './Components/Invoice/invoice'
 import Card from './Components/Card/carddetail'
 import Creditcard from './Components/Card/creditcard'
@@ -55,7 +56,7 @@ function App() {
           <Route path="/Search" exact component={NearByStore}/> 
           <Route path="/Product" exact component={ProductDetailPage}/> 
           <Route path="/Filter" exact component={FilterPage}/> 
-          <Route path="/Userprofile" exact component={Userprofile}/>
+          {/* <Route path="/Userprofile" exact component={Userprofile}/> */}
           <Route path="/Cart" exact component={Cart}/> 
           <ProductDetailPage />
           <Form />
