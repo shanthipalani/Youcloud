@@ -60,8 +60,9 @@ function Nav(props) {
                 </Link>
               </div>
               <div className="col-lg-4 nav_icon_right d-md-none d-flex flex-row justify-content-end">
-                <span className="side_icons"> <img src={Usersmall} className="pr-3" style={{ height: 16 }} /></span>
-                <span className="side_icons">  <img src={Heart} className="pr-3" style={{ height: 15 }} /></span><span className="side_icons"><Badge count={5} size="small" style={{ fontSize: 8, top: 6, background: "#57bf86" }}><img src={Cartsmall} className="pr-2 " style={{ height: 18 }} /></Badge></span>
+                <span className="side_icons"> <Link to="/Userprofile"> <img src={Usersmall} className="pr-3" style={{ height: 16 }} /></Link></span>
+                <span className="side_icons">  <img src={Heart} className="pr-3" style={{ height: 15 }} /></span>
+                <span className="side_icons"><Badge count={5} size="small" style={{ fontSize: 8, top: 6, background: "#57bf86" }}><a href="/Cart"> <img src={Cartsmall} className="pr-2 " style={{ height: 18 }} /></a></Badge></span>
 
               </div>
 
@@ -102,8 +103,9 @@ function Nav(props) {
 
             <div className="col-lg-2 col-md-4 col-sm-12 nav_icon_right d-none d-md-flex">
 
-              <span className="side_icons">  <img src={Usersmall} className="pr-md-4" style={{ height: 18 }} /></span>
-              <span className="side_icons pl-2">  <img src={Heart} className="pr-md-4" style={{ height: 18 }} /></span><span className="side_icons px-2"><Badge count={5} size="large" style={{ fontSize: 10, top: 6, background: "#57bf86" }}> <img src={Cartsmall} className="pr-3 " style={{ height: 18 }} /></Badge></span>
+              <span className="side_icons"> <Link to="/Userprofile"> <img src={Usersmall} className="pr-md-4" style={{ height: 18 }} /></Link></span>
+              <span className="side_icons pl-2">  <img src={Heart} className="pr-md-4" style={{ height: 18 }} /></span>
+              <span className="side_icons px-2"><Badge count={5} size="large" style={{ fontSize: 10, top: 6, background: "#57bf86" }}> <Link to="/Cart"> <img src={Cartsmall} className="pr-3 " style={{ height: 18 }} /></Link></Badge></span>
             </div>
           </div>
 

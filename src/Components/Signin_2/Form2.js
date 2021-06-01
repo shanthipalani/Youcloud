@@ -110,7 +110,7 @@ class Form2 extends Component {
 
                                                     <div className="col-sm-6">
                                                         <div className="row d-flex justify-content-end">
-                                                            <a className="forgot_password_color" href="/Forgot Password">Forgot Password?</a>
+                                                            <a className="forgot_password_color" href="/forgotpassword">Forgot Password?</a>
                                                         </div>
                                                     </div>
                                                 </div>

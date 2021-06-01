@@ -55,7 +55,7 @@ function Category(props ) {
             <div className="category-button d-flex justify-content-start align-items-center" type="div" onClick={handleButtonClick}>
             <span className="p-3 pl-md-4 m-0" style={{fill: "white"}}>
                      {/* <Menu16x12Svg />     */}
-                     <img className="ml-2" src={require(`../../Asset/images/ham.png`).default} style={{height: 18}} />
+                     <img className="ml-2" src={require(`../../Asset/images/ham.png`).default}  style={{height: 18}} />
                 
                 </span> <span className="d-none d-md-block">All Categories</span>
                 {/* <span className="departments__button-icon">

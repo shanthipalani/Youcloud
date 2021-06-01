@@ -3,25 +3,33 @@ import Nav from '../navigation/nav'
 import Footer from '../Footer/footer'
 import Healthcare from '../../Asset/images/Healthcare.png'
 import './cart.css'
-
+import Verifiedgreen from '../../Asset/images/verifiedgreen.png'
+import Verified from '../../Asset/images/verified.png'
+// import deleteicon from '../../Asset/images/deleteicon.png'
+import {Link} from 'react-router-dom'
 
 const cart = () => {
     return (
       <>
-      <Nav  hasCategory={true} />
-        <div className="container mt-4 mb-4">                
-          <section className="row cart_wrapper">
+      <Nav />
+        <div className="container mt-4 mb-4">
+          <div className="container mt-4">
+            <div className="row linksize">
+              Home &nbsp;&#62;&nbsp; Products &nbsp;&#62;&nbsp; Detail Products
+            </div>
+          </div>                 
+          <section className="row cart_wrapper mt-5">
 
             <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
-              <span className="current_page"><img src={Healthcare} className="" />   SHOPPINGBAG</span>
+              <span className="current_page"><img src={Verifiedgreen} width="60" height="45" className="" />   SHOPPINGBAG</span>
             </div>
 
             <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
-              <span className="current_page"><img src={Healthcare} className="" />   SHIPPING AND CHECKOUT</span>
+              <span className="current_page"><img src={Verifiedgreen} width="60" height="45" className="" />   SHIPPING AND CHECKOUT</span>
             </div>
 
             <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
-              <span className="upcoming_page"><img src={Healthcare} className="" />   CONFIRMATION</span>
+              <span className="upcoming_page"><img src={Verified} width="60" height="45" className="" />   CONFIRMATION</span>
             </div>
 
           </section>
@@ -89,7 +97,7 @@ const cart = () => {
                   <div className="col-xl-12 mt-4">
                   <div className="row">
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                      <div className=""><button className="checkout_btn btn2 btn_size">Back to Shopping</button></div>
+                      <div className=""><Link to="/NearbyStore"><button className="checkout_btn btn2 btn_size">Back to Shopping</button></Link></div>
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                       <div className="text-left"><button className="checkout_btn btn_size">Payment</button></div>

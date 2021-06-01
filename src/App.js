@@ -23,7 +23,7 @@ import Form3 from './Components/Signin_3/Form3'
 import Signup from './Components/SignUp/signup'
 import NearByStore from './Components/NearByStore/nearByStore'
 import ProductPage from './Components/ProductPage/productPage'
-import Layout from './Components/layout/layout'
+// import Layout from './Components/layout/layout'
 import Password from './Components/Password_recovery/pwd'
 import ProductDetailPage from './Components/ProductDetailPage/productDetailPage'
 import FilterPage from './Components/Filter/filterPage'
@@ -35,7 +35,8 @@ import Cart from './Components/Cart/cart'
 import Checkout from './Components/Cart/checkout'
 import Confirmation from './Components/Cart/confirmation'
 import Shiporder from './Components/Shipment_order/shipmentorder';
-//import Userprofile from './Components/Userprofile/userprofile'
+// import Userprofile from './Components/Userprofile/userprofile'
+import Userprofile from './Components/UserProfile/userprofile'
 
 import Invoice from './Components/Invoice/invoice'
 import Card from './Components/Card/carddetail'
@@ -49,15 +50,18 @@ function App() {
       <div>
         {/* <Form/> */}
        <Switch>
-          <Route path='/' exact component={ProductPage} ></Route>
+          <Route path='/' exact component={NearByStore} ></Route>
           <Route path="/forgotpassword" exact component={Password} />
           <Route path="/Signin" exact component={Form2}/> 
           <Route path="/Signup" exact component={Signup}/> 
           <Route path="/Search" exact component={NearByStore}/> 
           <Route path="/Product" exact component={ProductDetailPage}/> 
           <Route path="/Filter" exact component={FilterPage}/> 
-          {/* <Route path="/Userprofile" exact component={Userprofile}/> */}
-          <Route path="/Cart" exact component={Cart}/> 
+          <Route path="/Userprofile" exact component={Userprofile}/>
+          <Route path="/Cart" exact component={Cart}/>
+          <Route path="/Checkout" exact component={Checkout}/> 
+         </Switch> 
+
           <ProductDetailPage />
           <Form />
           <Form2/> 
@@ -65,9 +69,16 @@ function App() {
           <ProductPage /> 
           <NearByStore /> 
           <FilterPage /> 
-          <Layout/> 
+          {/* <Layout/>  */}
           <Password /> 
-         </Switch> 
+          <Cart />
+          <Checkout />
+          <Confirmation />
+          <Shiporder />
+          <Invoice />
+          <Card />
+          <Creditcard />
+          <Debitcard />
     </div>
 
   );

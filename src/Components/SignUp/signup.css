@@ -79,3 +79,11 @@ input{
 .dont_have_an_acc_color{
     color: #092C4C;
 }
+
+.password_place_position{
+    width: 100%;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 10px;   
+}
