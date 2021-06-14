@@ -35,7 +35,7 @@ function footer() {
                     <div className="col-12 col-md list_2">
                         <ul>
                             <li className="about_footer">ABOUT</li>
-                            <li className="mt-4 footercontentcolor">Contact US</li>
+                            <li className="mt-2 footercontentcolor">Contact US</li>
                             <li>About US</li>
                             <li>Careers</li>
                             <li>YouCloud Stories</li>
@@ -47,7 +47,7 @@ function footer() {
                     <div className="col-12 col-md list_3">
                         <ul>
                             <li className="about_footer">HELP</li>
-                            <li className="mt-4">Payment</li>
+                            <li className="mt-2">Payment</li>
                             <li>Shipping</li>
                             <li>Cancellation & Return</li>
                             <li>FAQ</li>
@@ -60,7 +60,7 @@ function footer() {
                     <div className="col-12 col-md list_4">
                         <ul>
                             <li className="about_footer">POLICY</li>
-                            <li className="mt-4">Return Policy</li>
+                            <li className="mt-2">Return Policy</li>
                             <li>Terms of Use</li>
                             <li>Security</li>
                             <li>Privacy</li>
@@ -108,7 +108,7 @@ function footer() {
                     </div>
                     {/* </ul> */}
                 </div>
-                <div className="container">
+                <div className="container footer_content_icons">
                     <div className="row">
                         <div className="col">
                             <ul>
@@ -136,13 +136,15 @@ function footer() {
                 {/* <div className="d-flex footer_advertisement">
                 <img src={Helpcenter} alt="helpcenter" />
                 </div> */}
-                <hr className="footer_hrline" />                
+                <div className="footer_hrline">
+                <hr  />
+                </div>                
                 {/* <div className="copyright_content d-flex flex-column text-center flex-md-row px-md-4 pb-3"> */}
                 <div className="copyright_content text-center px-md-4 pb-3">
-                    <small className="mr-5">Conditions of Use & Sale</small>
-                    <small className="mr-5">Privacy Notice</small>
-                    <small className="mr-5">Interest-Based Ads</small>
-                    <small>© 2021. YouShop. Inc. or its affiliates</small>
+                    <small className="mr-5 footer_content_bottom">Conditions of Use & Sale</small>
+                    <small className="mr-5 footer_content_bottom" >Privacy Notice</small>
+                    <small className="mr-5 footer_content_bottom">Interest-Based Ads</small>
+                    <small className="footer_content_bottom">© 2021. YouShop. Inc. or its affiliates</small>
                     {/* <small>Terms of Use - Privacy Policy - Link to Us</small> */}
                 </div>
                 

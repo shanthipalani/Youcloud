@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../navigation/nav";
+import Nav1 from "../navigation/nav1";
 import Footer from "../Footer/footer";
 import "./coupon.css";
 import Checkbox from "../../Asset/images/checkbox.png";
@@ -8,7 +8,7 @@ import Imgatcoupon from "../../Asset/images/imgatcoupon.png";
 const coupon = () => {
   return (
     <>
-      <Nav />
+      <Nav1 />
       <div className="container mt-5">
         <div className="row">
           <div className="col-lg-4 col-md-4">

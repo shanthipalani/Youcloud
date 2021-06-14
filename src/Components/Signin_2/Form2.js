@@ -65,8 +65,8 @@ class Form2 extends Component {
                 <div className="font_family_text">
                     <header className="nav-1 p-2">
                         <div className="head-1 container-fluid">
-                            <span>Copyright < AiFillCopyrightCircle/> 1996-2021 YouShop Ltd. All rights reserved</span>
-                            <span>Terms of Use - Privacy Policy - Link to Us</span>                            
+                            <span className="ml-5">Copyright < AiFillCopyrightCircle/> 1996-2021 YouShop Ltd. All rights reserved</span>
+                            <span className="mr-5">Terms of Use - Privacy Policy - Link to Us</span>                            
                         </div>
                     </header>
 
@@ -126,7 +126,7 @@ class Form2 extends Component {
                                         <button className="button-2a d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Google} alt="google"/><div className="small d-md-none">Continue with Google</div><div className="d-none d-md-flex ml-3">Continue with Google</div></button>
                                     </div>
                                     <br></br>
-                                    <div>
+                                    <div >
                                         <button className="button-2a d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Fb} alt="FB"/><div className="small d-md-none">Continue with Facebook</div><div className="d-none d-md-flex ml-2">Continue with Facebook</div></button>
                                     </div>
                                     <br></br>

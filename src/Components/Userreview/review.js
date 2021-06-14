@@ -3,7 +3,7 @@ import React from 'react'
 import Rating from "react-rating";
 // import {Rating} from 'material-ui-rating'
 import './review.css'
-import Nav from '../navigation/nav'
+import Nav1 from '../navigation/nav1'
 import Footer from '../Footer/footer'
 import Imgatcoupon from "../../Asset/images/imgatcoupon.png";
 import Location from '../../Asset/images/location.png'
@@ -14,7 +14,7 @@ import TransitionsModal from '../Userreview/addreview'
 const review = () =>{
     return(
         <div>
-            <Nav />
+            <Nav1 />
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-3 col-md-3 mt-5">
@@ -185,4 +185,4 @@ const review = () =>{
 }
 
 
-export default review
+export default review;

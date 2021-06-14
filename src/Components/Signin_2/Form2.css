@@ -192,3 +192,8 @@ hr{
         font-size: 12px;
         padding-left: 6px;
     }    
+
+.button_width_height{
+        width: 300px;
+        /* height: 100px; */
+}    
