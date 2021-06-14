@@ -1,0 +1,45 @@
+.carrefour_hyper{
+    font-size: 20px;
+    font-weight:600;
+}
+
+.contact_seller{
+    color: #FA634D;
+}
+
+.addreview{
+    justify-content: flex-end;
+}
+
+.reviewcontent{
+    width: 500px;
+    height: 170px;
+    /* border: 1px solid black; */
+    background-color:#23ddb424;   
+    padding: 40px;
+    
+}
+
+.ahmet_duncan{
+    color: #11293B;
+    font-weight: bold;
+    
+}
+
+.rated-star-color{
+    color: gold;
+}
+
+.empty-star-color{
+    color: black;
+}
+
+/* .reviewstar_content{
+    justify-content: flex-end;
+} */
+
+/* .addreview_modal{
+    justify-content: flex-end;
+    width: 150px;
+    height: 50px;
+} */

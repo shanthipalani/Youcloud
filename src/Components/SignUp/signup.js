@@ -6,7 +6,7 @@ import './signup.css'
 import eye from '../../Asset/images/eye.png';
 
 const validEmailMail =(expression)=>{
-    const regEp=/^([a-zA-Z0-9]{3,})@([a-z]+)\.([a-z]{2,5})$/
+    const regEp=/^([a-zA-Z0-9.]{3,})@([a-z]+)\.([a-z]{2,5})$/
     if(regEp.test(expression)){
         return true;
     }

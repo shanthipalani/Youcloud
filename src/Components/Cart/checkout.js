@@ -97,10 +97,10 @@ const cart = () => {
                   <div className="col-xl-12 mt-4">
                   <div className="row">
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                      <div className=""><Link to="/NearbyStore"><button className="checkout_btn btn2 btn_size">Back to Shopping</button></Link></div>
+                      <div className=""><Link to="/"><button className="checkout_btn btn2 btn_size">Back to Shopping</button></Link></div>
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                      <div className="text-left"><button className="checkout_btn btn_size">Payment</button></div>
+                      <div className="text-left"><Link to="/Payment"><button className="checkout_btn btn_size">Payment</button></Link></div>
                     </div>
                   </div>
                   </div>

@@ -2,7 +2,9 @@ import React from "react";
 import "./carddetail.css";
 import Nav from "../navigation/nav";
 import Footer from "../Footer/footer";
-import Healthcare from '../../Asset/images/Healthcare.png'
+// import Healthcare from '../../Asset/images/Healthcare.png'
+import Verifiedgreen from '../../Asset/images/verifiedgreen.png'
+// import Verified from '../../Asset/images/verified.png'
 import Googlepay from '../../Asset/images/googlepay.png'
 import Paytm from '../../Asset/images/paytm.png'
 import PhonePe from '../../Asset/images/PhonePe.png'
@@ -14,25 +16,26 @@ const card = () => {
       <Nav />
       <div>
         <div className="container mt-4 mb-4">
-          <section className="row cart_wrapper">
-            <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
-              <span className="current_page">
-                <img src={Healthcare} className="" /> SHOPPINGBAG
-              </span>
-            </div>
+          <div className="container mt-4">
+              <div className="row linksize">
+                Home &nbsp;&#62;&nbsp; Products &nbsp;&#62;&nbsp; Detail Products
+              </div>
+            </div> 
+            <section className="row cart_wrapper mt-5">
 
-            <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
-              <span className="current_page">
-                <img src={Healthcare} className="" /> SHIPPING AND CHECKOUT
-              </span>
-            </div>
+              <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
+                <span className="current_page"><img src={Verifiedgreen} width="60" height="45" className="" />   SHOPPINGBAG</span>
+              </div>
 
-            <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
-              <span className="current_page">
-                <img src={Healthcare} className="" /> CONFIRMATION
-              </span>
-            </div>
-          </section>
+              <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
+                <span className="upcoming_page"><img src={Verifiedgreen} width="60" height="45" className="" />   SHIPPING AND CHECKOUT</span>
+              </div>
+
+              <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
+                <span className="upcoming_page"><img src={Verifiedgreen} width="60" height="45" className="" />   CONFIRMATION</span>
+              </div>
+
+            </section>
 
           <section className="mt-4 mb-5 col-xl-12">
             <div className="row">
@@ -88,16 +91,16 @@ const card = () => {
                             <option value="Credit Card">Credit Card</option>
                             <option value="Debit Card">Debit Card</option>
                         </select>
-                        <div className="mt-4">
+                        <div className="mt-5">
                             <button className="paynow_button">Pay now</button>
                         </div>
-                        <div className="mt-5">
+                        <div className="mt-4">
                             Or Wallet Payment
                         </div>
-                        <div className="d-flex walleticons">
-                            <img src={Paytm} width="30" height="30"/>
-                            <img src={Googlepay} width="30" height="30"/>
-                            <img src={PhonePe} width="30" height="30"/>
+                        <div className="d-flex walleticons mt-4">
+                            <img src={Paytm} className="paytm_size ml-4" alt="paytm"/>
+                            <img src={Googlepay} className="googlepay_size ml-5" alt="googlepay"/>
+                            <img src={PhonePe} className="phonepe_size ml-5" alt="phonepe"/>
                         </div>
                         </div>                  
                     </div>

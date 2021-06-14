@@ -1,0 +1,60 @@
+.reviewer{
+    border: 1px solid #cecece;
+}
+
+.review_comments{
+    width: 100%;
+    border: 1px solid #ccc;
+
+}
+
+.reviewheading{
+    color: #144167;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.rating_select{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.btd{
+    width: 100px;
+    height: 40px;
+    color:white;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.submit{
+    background-color: #2DCCA9;
+    border: 1px solid #2DCCA9;
+    
+}
+
+.delete{
+    background-color: #FA634D;
+    border: 1px solid #FA634D
+}
+
+.addreview_modal{
+    width: 150px;
+    height: 32px;
+    background-color: #2DCCA9;
+    color: white;
+}
+
+.sortby{
+    width: 150px;
+    height: 30px;
+}
+
+.maincontent{
+    float: right;
+}
+
+.modalwidth{
+    max-width: 100%;
+}

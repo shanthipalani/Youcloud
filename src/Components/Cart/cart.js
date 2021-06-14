@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from '../navigation/nav'
 import Footer from '../Footer/footer'
-import Healthcare from '../../Asset/images/Healthcare.png'
+// import Healthcare from '../../Asset/images/Healthcare.png'
 import './cart.css'
 import Verifiedgreen from '../../Asset/images/verifiedgreen.png'
 import Verified from '../../Asset/images/verified.png'

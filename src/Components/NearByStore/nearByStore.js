@@ -7,6 +7,7 @@ import Footer from '../Footer/footer'
 import './nearByStore.css'
 import eye from '../../Asset/images/eye.png';
 import cell from '../../Asset/images/cell.png';
+// import Retailhomesecbg from '../../Asset/images/retailhomesecbg.jpg'
 import {
   Typography,
   Card,
@@ -52,7 +53,7 @@ function tagRender(props) {
 
 
 function Result(props) {
-  const [count, setCount] = useState(props.count > 6 ? 6 : props.count);
+  const [count, setCount] = useState(props.count > 5 ? 5 : props.count);
   return (<>{Array(count).fill(null).slice(0, count).map(() => (
 
     <div className="col-sm-6 col-md-6 col-lg-4 col-xl-2">
@@ -77,7 +78,7 @@ function Result(props) {
             <div
               className="pl-2 pt-1 location truncate"
             >
-              <span className="country">Al Maya Suppermarket</span>
+              <span className="country">Al Maya Supermarket</span>
 
               <div className="tr-rating d-flex w-100 flex-row pt-2">
                 <Rating
@@ -107,6 +108,7 @@ function Result(props) {
    Al Karama, Dubai
           </p>
                 {!true && 100 > 200 ? (
+                  
                   <button
                     className="btn px-2"
                     style={{ fontSize: 12, color: "#42939D", zIndex: 2 }}
@@ -123,8 +125,8 @@ function Result(props) {
             </div>
 
             <div className="discounted-price-tag pl-2 pt-0">
-              <img className="text-center" style={{ height: 30 }} src={require(`../../Asset/images/visitnow.png`).default} />
-              <small style={{ position: "absolute", top: "25%", left: 30 }}>Visit Now</small>
+              <Link to="/ProductPage"><img className="text-center" style={{ height: 30 }} src={require(`../../Asset/images/visitnow.png`).default} />
+              <small style={{ position: "absolute", top: "25%", left: 30 }}>Visit Now</small></Link>
 
             </div>
 
@@ -139,8 +141,8 @@ function Result(props) {
     </div>
 
   ))}
-    {props.count > count ? <div class="d-grid gap-2 col-8 col-md-2 mx-auto pt-5">
-      <div className="text-center" onClick={() => setCount(count + 6)}>Load More....</div>
+    {props.count > count ? <div class="col-12 pt-5">
+      <div className="text-center" onClick={() => setCount(count + 5)}>Load More....</div>
     </div> : null}
   </>
   )
@@ -231,9 +233,9 @@ class NearByStore extends React.Component {
       <>
 
         <Nav hasCategory={false} />
-        <div className="container-fluid">
+        <div className="container">
           <section className="row">
-            <div className="col-12 px-3 px-md-5 pt-md-5 pb-0">
+            <div className="col-12 pt-md-5">
               {/* <Tabs
         type="editable-card"
         onChange={this.onChange}
@@ -319,30 +321,30 @@ class NearByStore extends React.Component {
                   })} src={require(`../../Asset/images/filterBtn.png`).default} />
 
                 </Tabs>
-
-                <div className="row h-100 mobile_view_1 pt-4">
+                </div>
+            </div>
+          </section>
+        </div>
+                <div className="container-fluid">  
+                  <div className="row h-100 mobile_view_1 storecontentbelow_bg pt-4">
                             <div className=" mobile_img-1 col-lg-6">
                                 <div className="row">
                                     <img src={cell} alt="Phone" />
                                 </div>
                             </div>
                             <div className="col-12 col-lg-6 d-flex justify-content-center align-items-start flex-column">
-                              <h3>Get YouShop App</h3>
-                              <p>Search for products/services and connect with verified sellers on the go!</p>
+                              <h3 className="youcloud_consumerapp">Get YouCloud Consumer App</h3>
+                              <p>Search for products/services and connect with <br/>verified sellers on the go!</p>
                               <div className="w-100 d-flex justify-content-center justify-content-md-start align-item-center">
-                              <img className="" style={{ height: 45 }} src={require(`../../Asset/images/androidios.png`).default} />
+                              <img className="" style={{ height: 70, width:500 }} src={require(`../../Asset/images/androidios.png`).default} />
                               </div>
                               <div className="pt-4 w-100 d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center">
-                              <input type="email" name="email" id="email" placeholder="Enter address" style={{width: 225, backgroundColor: "#EDF0F7", borderRadius: 25}} />
+                              <input type="email" name="email" id="email" placeholder="Email address" style={{width: 225, backgroundColor: "white", borderRadius: 25}} />
                               <img className="text-center ml-3 my-3 " style={{ height: 42,  borderRadius: 20, boxShadow: "-3px 3px 22px -7px #6b6b6b" }} src={require(`../../Asset/images/send.png`).default} />
                               </div>
                             </div>
-                            </div>
-
-              </div>
-            </div>
-          </section>
-        </div>
+                    </div>
+                  </div>           
 
         <Footer />
       </>

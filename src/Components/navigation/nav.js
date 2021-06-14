@@ -99,7 +99,7 @@ function Nav(props) {
                   <button type="submit" className="search"><BiSearch /></button>
                 </div>
               </form>
-            </div>
+            </div>          
 
             <div className="col-lg-2 col-md-4 col-sm-12 nav_icon_right d-none d-md-flex">
 

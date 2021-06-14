@@ -103,7 +103,7 @@ input:focus {
     
 .keep-signed-1 {
         width: 18px;
-        height: 18px;
+        height: 14px;
 }
     
 @media only screen and (max-width: 1100px) {
@@ -136,7 +136,7 @@ hr{
 
 .keep_me_signed_font_color{
         color:  #ABB3BB;
-        font-size: 18px;
+        font-size: 14px;
 }
 
 @media only screen and (max-width:1099px){
@@ -163,10 +163,15 @@ hr{
     }  
 
 .dont_have_an_accountsize{
-        font-size: 18px;
+        font-size: 14px;
         color: #092C4C;
     }    
 
+
+.hr_line_color{
+        color: #E1E1E1;
+        border: #E1E1E1;
+}
 
 .Signup_buttoncolor{
 

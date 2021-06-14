@@ -42,6 +42,12 @@ import Invoice from './Components/Invoice/invoice'
 import Card from './Components/Card/carddetail'
 import Creditcard from './Components/Card/creditcard'
 import Debitcard from './Components/Card/debitcard'
+import Coupon from './Components/Coupon/coupon'
+import Loyaltypoints from './Components/Loyaltypoints/loyaltypoints'
+import Review from './Components/Userreview/review'
+import OrderHistory from './Components/Order_history/orderhistory'
+
+
 
 
 function App() {
@@ -49,7 +55,7 @@ function App() {
 
       <div>
         {/* <Form/> */}
-       <Switch>
+        <Switch>
           <Route path='/' exact component={NearByStore} ></Route>
           <Route path="/forgotpassword" exact component={Password} />
           <Route path="/Signin" exact component={Form2}/> 
@@ -59,26 +65,37 @@ function App() {
           <Route path="/Filter" exact component={FilterPage}/> 
           <Route path="/Userprofile" exact component={Userprofile}/>
           <Route path="/Cart" exact component={Cart}/>
-          <Route path="/Checkout" exact component={Checkout}/> 
-         </Switch> 
+          <Route path="/Checkout" exact component={Checkout}/>
+          <Route path="/Invoice" exact component={Invoice}/>
+          <Route path="/ProductPage" exact component={ProductPage}/>
+          <Route path="/Review" exact component ={Review} />
+          <Route path="/OrderHistory" exact component={OrderHistory} />
+          <Route path="/Loyaltypoints" exact component ={Loyaltypoints} />
+          <Route path="/Coupon" exact component={Coupon} />
+          <Route path="/Payment" exact component={Card}/>
+        </Switch> 
 
-          <ProductDetailPage />
-          <Form />
-          <Form2/> 
-          <Form3/>  
-          <ProductPage /> 
-          <NearByStore /> 
-          <FilterPage /> 
+          {/* <ProductDetailPage /> */}
+          {/* <Form /> */}
+          {/* <Form2/>  */}
+          {/* <Form3/> */}
+          {/* <Password />  */}
+          {/* <ProductPage />  */}
+          {/* <NearByStore />  */}
+          {/* <FilterPage />  */}
           {/* <Layout/>  */}
-          <Password /> 
-          <Cart />
-          <Checkout />
-          <Confirmation />
-          <Shiporder />
-          <Invoice />
-          <Card />
-          <Creditcard />
-          <Debitcard />
+          {/* <Cart /> */}
+          {/* <Checkout /> */}
+          {/* <Confirmation /> */}
+          {/* <Shiporder /> */}
+          {/* <OrderHistory/> */}
+          {/* <Invoice /> */}
+          {/* <Card /> */}
+          {/* <Creditcard /> */}
+          {/* <Debitcard /> */}
+          {/* <Coupon /> */}
+          {/* <Loyaltypoints /> */}
+          {/* <Review /> */}
     </div>
 
   );

@@ -500,9 +500,16 @@ class ProductPage extends React.Component {
 
                           <div className="d-flex flex-column pl-5 text-right">
                     
-                            <div className="py-2" style={{ color: "#15D55D", fontWeight: "bold" }}>See review</div>
+                            <Link to="/Review"><div className="py-2" style={{ color: "#15D55D", fontWeight: "bold" }}>See review</div></Link>
 
                             <div><i class="far fa-clock pr-3"></i>24/7 hour working</div>
+                          </div>
+
+                          <div className="d-flex flex-column pl-5 text-right">
+                    
+                            <Link to="/Coupon"><div className="py-2" style={{ color: "#15D55D", fontWeight: "bold" }}>Discount Info</div></Link>
+
+                            {/* <div><i class="far fa-clock pr-3"></i>24/7 hour working</div> */}
                           </div>
 
                          </div>

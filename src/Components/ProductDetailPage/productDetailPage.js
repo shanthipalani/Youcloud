@@ -379,11 +379,11 @@ function ProductDetailPage() {
                   <div className="d-flex flex-column flex-md-row w-100 mt-4 align-items-center">
 
 <div className="mx-md-4" style={{width: 240}}>
-<button type="button" class="btn-custom-secondary my-1"><img className="mr-2" src={require(`../../Asset/images/cart2.png`).default} style={{height: 18}} />Add to cart</button>
+<Link to="/Cart"><button type="button" class="btn-custom-secondary my-1"><img className="mr-2" src={require(`../../Asset/images/cart2.png`).default} style={{height: 18}} />Add to cart</button></Link>
 
 </div>
 <div style={{width: 240}}>
-<button type="button" class="btn-custom-success2  my-1" ><img className="mr-2" src={require(`../../Asset/images/bag.png`).default} style={{height: 18}} />Buy Now</button>
+<Link to="/Cart"><button type="button" class="btn-custom-success2  my-1" ><img className="mr-2" src={require(`../../Asset/images/bag.png`).default} style={{height: 18}} />Buy Now</button></Link>
 
 </div>
 

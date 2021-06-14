@@ -1,5 +1,6 @@
 import React from 'react'
 import './userprofile.css'
+import {Link} from 'react-router-dom'
 import Nav from '../../Components/navigation/nav'
 import Footer from '../../Components/Footer/footer'
 import address from '../../Asset/images/address.png'
@@ -33,12 +34,14 @@ const userprofile = () => {
                     <div className="row">
                         <div className="col-lg-5 col-md-7">
                             <p>
-                                <span className="d-flex">
-                                    <img className="ml-5" src={userpic} alt="userpic" />
-                                    <p className="ml-4">Fannie Jackson</p>
-                                    <p>+1(454)3421 1432</p>
+                                <div className="d-flex w-100">
+                                    <div className="w-25"><img className="ml-5" src={userpic} alt="userpic" /></div>
+                                    <div className="w-75">
+                                        <div className="">Fannie Jackson</div>
+                                        <div>+1(454)3421 1432</div>
+                                    </div>
 
-                                </span>
+                                </div>
                             </p>
                             <div className="payment_content ml-5 mt-5">
                                 <div className="d-flex ">
@@ -55,6 +58,16 @@ const userprofile = () => {
                                     <img src={vouchers} alt="vouchers" width="24" height="24" className="ml-2" />
                                     <p className=" payment_method_width ml-3">My Vouchers</p>
                                     <img className="arrow_place " width="18" height="18" src={rightarrow} alt="arrow" />
+                                </div>
+                                <div className="d-flex ">
+                                    <img src={vouchers} alt="vouchers" width="24" height="24" className="ml-2" />
+                                    <Link to="/OrderHistory"><p className=" payment_method_width_orderhistory ml-3">Order history</p></Link>
+                                    <Link to="/OrderHistory"><img className="arrow_place " width="18" height="18" src={rightarrow} alt="arrow" /></Link>
+                                </div>
+                                <div className="d-flex ">
+                                    <img src={vouchers} alt="vouchers" width="24" height="24" className="ml-2" />
+                                    <Link to="/Loyaltypoints"><p className=" payment_method_width_orderhistory ml-3">Loyalty points History</p></Link>
+                                    <Link to="/Loyaltypoints"><img className="arrow_place " width="18" height="18" src={rightarrow} alt="arrow" /></Link>
                                 </div>
                             </div>
                             <div className="payment_content ml-5 mt-5">
@@ -147,10 +160,10 @@ const userprofile = () => {
                   <div className="col-xl-12 mt-4">
                   <div className="row">
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                      <div className=""><button className="checkout_btn btn2 btn_size">Back to Shopping</button></div>
+                      <div className=""><Link to="/"><button className="checkout_btn btn2 btn_size">Back to Shopping</button></Link></div>
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                      <div className="text-left"><button className="checkout_btn btn_size">Payment</button></div>
+                      <div className="text-left"><Link to="/Payment"><button className="checkout_btn btn_size">Payment</button></Link></div>
                     </div>
                   </div>
                   </div>

@@ -36,8 +36,9 @@ footer {
 
 .copyright_content{
     color: white;
-    justify-content: space-between;
-    font-family:'Raleway' !important;
+    /* justify-content: space-between; */
+    /* font-family:'Raleway' !important; */
+
 }
 
 li{
@@ -47,5 +48,18 @@ li{
     font-weight: lighter;
 }
 
+.about_footer{
+    font-weight: 600;
+    /* font-size: 18px; */
+}
 
+.sellonyoushop{
+    color: white;
+}
 
+.footercontentcolor{
+    color: #f0ecec;
+}
+
+/* .footer_hrline{
+} */

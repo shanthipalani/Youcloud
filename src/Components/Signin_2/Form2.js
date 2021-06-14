@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import './Form2.css';
 import cell from '../../Asset/images/cell.png';
-import { FcGoogle } from 'react-icons/fc';
-import { AiFillFacebook,  AiFillCopyrightCircle } from 'react-icons/ai';
+// import { FcGoogle } from 'react-icons/fc';
+import {   AiFillCopyrightCircle } from 'react-icons/ai';
 // import {Form, FormText} from 'react-bootstrap';
 // import FormFileInput from 'react-bootstrap/esm/FormFileInput';
 import './Form2.css'
@@ -13,7 +13,7 @@ import Google from '../../Asset/images/Google.png'
 
 
 const validEmailMail =(expression)=>{
-    const regEp=/^([a-zA-Z0-9]{3,})@([a-z]+)\.([a-z]{2,5})$/
+    const regEp=/^([a-zA-Z0-9.]{3,})@([a-z]+)\.([a-z]{2,5})$/
     if(regEp.test(expression)){
         return true;
     }
@@ -94,7 +94,7 @@ class Form2 extends Component {
                                             <div className="position-relative">
                                                 <input type="Password" name="password" id="Password" placeholder="Enter your password" className="password_place" onChange={this.handleChange} />
                                                 {this.state.error.password.length>1?<span className="text-danger">{this.state.errors.password}</span>:""}
-                                                <img className="position-absolute eye_image" src={eye}/>
+                                                <img className="position-absolute eye_image" src={eye} alt="eye"/>
                                             </div>
                                         </div>
                                         <div className="form-group mb-4">
@@ -119,15 +119,15 @@ class Form2 extends Component {
                                     </form>
                                     <button className="button-1a"> Sign in</button>
                                     <div className="signin-divider mt-4 d-flex">
-                                        <span className="or_font_color">Or</span><hr />
+                                        <span className="or_font_color">Or</span><hr className="hr_line_color" />
                                     </div>
                                     <br></br>
                                     <div>
-                                        <button className="button-2a d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Google}/><div className="small d-md-none">Continue with Google</div><div className="d-none d-md-flex">Continue with Google</div></button>
+                                        <button className="button-2a d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Google} alt="google"/><div className="small d-md-none">Continue with Google</div><div className="d-none d-md-flex ml-3">Continue with Google</div></button>
                                     </div>
                                     <br></br>
                                     <div>
-                                        <button className="button-2a d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Fb}/><div className="small d-md-none">Continue with Facebook</div><div className="d-none d-md-flex">Continue with Facebook</div></button>
+                                        <button className="button-2a d-flex  align-items-center w-100 px-2 px-md-5 flex-column flex-md-row"><img src={Fb} alt="FB"/><div className="small d-md-none">Continue with Facebook</div><div className="d-none d-md-flex ml-2">Continue with Facebook</div></button>
                                     </div>
                                     <br></br>
                                     <div>

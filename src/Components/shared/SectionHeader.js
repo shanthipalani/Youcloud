@@ -1,7 +1,7 @@
 // react
 import React from 'react';
 // third-party
-import classNames from 'classnames';
+// import classNames from 'classnames';
 // application 
 
 import { Link } from "react-router-dom";
@@ -15,10 +15,10 @@ function SectionHeader (props ) {
         arrows = false,
         groups = [],
         links = [],
-        currentGroup,
+        // currentGroup,
         onNext,
         onPrev,
-        onChangeGroup,
+        // onChangeGroup,
     } = props;
 
     return (

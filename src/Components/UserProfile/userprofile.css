@@ -11,6 +11,11 @@
     width: 126px;
 }
 
+.payment_method_width_orderhistory{
+    width: 126px;
+    color: black;
+}
+
 .payment_content{
     border-radius: 10px;
     box-shadow: 0 1px 1px #707070;

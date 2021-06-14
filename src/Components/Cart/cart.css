@@ -76,7 +76,7 @@ td, th {
 }
 
 hr {
-    background: rgb(226 226 226);
+    background: rgb(226 226 226) !important;
 }
 
 .voucher .title {
