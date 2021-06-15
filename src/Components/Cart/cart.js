@@ -21,15 +21,15 @@ const cart = () => {
           <section className="row cart_wrapper mt-5">
 
             <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
-              <span className="current_page"><img src={Verifiedgreen} width="60" height="45" className="" />   SHOPPINGBAG</span>
+              <span className="current_page"><img src={Verifiedgreen} width="45" height="45" className="" />   SHOPPINGBAG</span>
             </div>
 
             <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
-              <span className="upcoming_page"><img src={Verified} width="60" height="45" className="" />   SHIPPING AND CHECKOUT</span>
+              <span className="upcoming_page"><img src={Verified} width="45" height="45" className="" />   SHIPPING AND CHECKOUT</span>
             </div>
 
             <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
-              <span className="upcoming_page"><img src={Verified} width="60" height="45" className="" />   CONFIRMATION</span>
+              <span className="upcoming_page"><img src={Verified} width="45" height="45" className="" />   CONFIRMATION</span>
             </div>
 
           </section>

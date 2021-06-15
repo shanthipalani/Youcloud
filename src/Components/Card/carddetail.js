@@ -24,15 +24,15 @@ const card = () => {
             <section className="row cart_wrapper mt-5">
 
               <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
-                <span className="current_page"><img src={Verifiedgreen} width="60" height="45" className="" />   SHOPPINGBAG</span>
+                <span className="current_page"><img src={Verifiedgreen} width="45" height="45" className="" />   SHOPPINGBAG</span>
               </div>
 
               <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
-                <span className="upcoming_page"><img src={Verifiedgreen} width="60" height="45" className="" />   SHIPPING AND CHECKOUT</span>
+                <span className="upcoming_page"><img src={Verifiedgreen} width="45" height="45" className="" />   SHIPPING AND CHECKOUT</span>
               </div>
 
               <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 height-60">
-                <span className="upcoming_page"><img src={Verifiedgreen} width="60" height="45" className="" />   CONFIRMATION</span>
+                <span className="upcoming_page"><img src={Verifiedgreen} width="45" height="45" className="" />   CONFIRMATION</span>
               </div>
 
             </section>
@@ -97,10 +97,25 @@ const card = () => {
                         <div className="mt-4">
                             Or Wallet Payment
                         </div>
-                        <div className="d-flex walleticons mt-4">
-                            <img src={Paytm} className="paytm_size ml-4" alt="paytm"/>
-                            <img src={Googlepay} className="googlepay_size ml-5" alt="googlepay"/>
-                            <img src={PhonePe} className="phonepe_size ml-5" alt="phonepe"/>
+                          <div className="col-xs-12 walleticons mt-4">
+                            <div className="row walleticons_aligning">
+
+                              <div className="col-md-4 col-xs-12">
+                                <div className="row paytm_align">
+                                  <img src={Paytm} className="paytm_size" alt="paytm"/>
+                                </div>                                
+                              </div>
+                              <div className="col-md-4 col-xs-12">
+                                <div className="row paytm_align">
+                                  <img src={Googlepay} className="googlepay_size" alt="googlepay"/>
+                                </div>
+                              </div>
+                              <div className="col-md-4 col-xs-12">
+                              <div className="row paytm_align">
+                                <img src={PhonePe} className="phonepe_size" alt="phonepe"/>
+                              </div>  
+                              </div>
+                          </div>
                         </div>
                         </div>                  
                     </div>
@@ -123,7 +138,7 @@ const card = () => {
                     <div className="w-25">
                       <img className="img-box"></img>
                     </div>
-                    <div className="w-75 pt-1">
+                    <div className="w-75 img_contents pt-1">
                       <div>Sample Product Image</div>
                       <div>Color: Red</div>
                       <div>Size: L</div>
@@ -135,7 +150,7 @@ const card = () => {
                     <div className="w-25">
                       <img className="img-box"></img>
                     </div>
-                    <div className="w-75 pt-1">
+                    <div className="w-75 img_contents pt-1">
                       <div>Sample Product Image</div>
                       <div>Color: Red</div>
                       <div>Size: L</div>
@@ -147,7 +162,7 @@ const card = () => {
                     <div className="w-25">
                       <img className="img-box"></img>
                     </div>
-                    <div className="w-75 pt-1">
+                    <div className="w-75 img_contents pt-1">
                       <div>Sample Product Image</div>
                       <div>Color: Red</div>
                       <div>Size: L</div>

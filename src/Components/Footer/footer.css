@@ -76,3 +76,9 @@ li{
 .footer_content_bottom{
     font-size: 13px;
 }
+
+/* @media only screen and (max-width:426px){
+.about_and_help_content{
+    display: flex;
+}
+} */

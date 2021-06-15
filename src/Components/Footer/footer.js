@@ -32,7 +32,8 @@ function footer() {
                             <li></li>
                         </ul>
                     </div> */}
-                    <div className="col-12 col-md list_2">
+                    {/* <div className="about_and_help_content"> */}
+                    <div className="col-12 col-md list_2 ">
                         <ul>
                             <li className="about_footer">ABOUT</li>
                             <li className="mt-2 footercontentcolor">Contact US</li>
@@ -57,6 +58,7 @@ function footer() {
                             {/* <li className="mt-4"><img src={Star} alt="star" width="20"/><span className="ml-3">Advertise</span></li>                             */}
                         </ul>
                     </div>
+                    {/* </div> */}
                     <div className="col-12 col-md list_4">
                         <ul>
                             <li className="about_footer">POLICY</li>
