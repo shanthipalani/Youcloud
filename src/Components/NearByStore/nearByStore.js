@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import React from 'react'
+import { Container} from 'react-bootstrap';
 import Rating from "react-rating";
 import Nav1 from '../navigation/nav1'
 import Footer from '../Footer/footer'
@@ -56,7 +57,7 @@ function Result(props) {
   const [count, setCount] = useState(props.count > 5 ? 5 : props.count);
   return (<>{Array(count).fill(null).slice(0, count).map(() => (
 
-    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+    <div className="col">
       <div
         className={`cards zoomable m-2`}
       >
@@ -142,7 +143,7 @@ function Result(props) {
 
   ))}
     {props.count > count ? <div class="col-12 pt-5">
-      <div className="text-center" onClick={() => setCount(count + 5)}>Load More....</div>
+      <div className="text-center load_more" onClick={() => setCount(count + 5)}>Load More....</div>
     </div> : null}
   </>
   )
@@ -153,20 +154,20 @@ const initialPanes = [
   {
     country: "All Stores", key: '0',
     listings: [
-      { title: 'Dubai', content: <div className="row pb-5"><Result count={16} /></div>, key: '0' },
-      { title: 'Al Karma', content: <div className="row pb-5"><Result count={4} /></div>, key: '1' }
+      { title: 'Dubai', content: <div className="row row-cols-5"><Result count={16} /></div>, key: '0' },
+      { title: 'Al Karma', content: <div className="row row-cols-5"><Result count={4} /></div>, key: '1' }
     ]
   },
   {
     country: "Dubai", key: '1',
     listings: [
-      { title: 'Al Karma', content: <div className="row pb-5"><Result count={5} /></div>, key: '0' },
+      { title: 'Al Karma', content: <div className="row row-cols-5"><Result count={5} /></div>, key: '0' },
     ]
   },
   {
     country: "Abu dhabi", key: '2',
     listings: [
-      { title: 'Al Falah', content: <div className="row pb-5"><Result count={14} /></div>, key: '0' },
+      { title: 'Al Falah', content: <div className="row row-cols-5"><Result count={14} /></div>, key: '0' },
     ]
   }
 ];
@@ -232,8 +233,9 @@ class NearByStore extends React.Component {
     return (
       <>
 
-        <Nav1 hasCategory={false} />
-        <div className="container">
+        <Nav1 hasCategory={false}  />
+        <div className="store_container">
+      
           <section className="row">
             <div className="col-12 pt-md-5">
               {/* <Tabs
@@ -324,6 +326,7 @@ class NearByStore extends React.Component {
                 </div>
             </div>
           </section>
+         
         </div>
                 <div className="container-fluid">  
                   <div className="row h-100 mobile_view_1 storecontentbelow_bg pt-4">

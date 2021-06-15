@@ -44,7 +44,7 @@ function BlockHeader(props ) {
 
     return (
         <div className={rootClasses} ref={elementRef}>
-            <div className="container">
+            <div className="store_container">
                 <div className="block-header__body">
                     
                     {hasPageTitle && <h1 className="block-header__title" ref={titleElementRef}>{pageTitle}</h1>}
