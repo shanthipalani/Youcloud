@@ -4,7 +4,13 @@ body{
     font-family:'Raleway' !important;
 }
 
+.store_container{
+    margin: 0 110px !important;
+}
 
+.load_more{
+    margin-bottom: 35px;
+}
 
 .form_border_1{
     
@@ -14,6 +20,7 @@ body{
     /* padding: 90px !important;    */
     background-color: white;
     box-shadow: 0 2px 2px 2px #ccc;
+    
 }
 
 .signin_buttoncolor{

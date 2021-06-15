@@ -26,8 +26,8 @@ function Nav1(props) {
     <>
 
       <header >
-        <div className="nav-2 d-none d-md-flex">
-          <div className="head-2 container">
+        <div className="nav-2 ">
+          <div className="head-2  store_container">
 
             <span><Link to="/"><img src={Pin} className="pr-2" style={{ height: 14 }} /></Link><small>Dubai Festival City - Dubai</small></span>
             <span><img src={Blogging} className="pr-2" style={{ height: 12 }} /><small className="pr-4">Blog</small>
@@ -41,7 +41,7 @@ function Nav1(props) {
           </div>
         </div>
 
-        <div className="container-fluid">
+        <div className="container-fluid ">
           <div className="row d-md-none py-2">
             <div className="col-12 mobile-header-wrapper">
               <button
@@ -75,7 +75,7 @@ function Nav1(props) {
         <div className="text-center small d-md-none">
           <span><i className="fas fa-map-marker-alt"></i> Dubai Festival City - Dubai</span>
         </div>
-        <div className="icon navcontainer container pt-2 pb-3">
+        <div className="icon navcontainer store_container pt-2 pb-3">
           <div className="row w-100 m-0">
             <div className="col-lg-2 col-4 d-none d-md-flex">
               {/* <Link to="/" className="">
@@ -115,7 +115,7 @@ function Nav1(props) {
 
         </div>
         <div className="header3">
-          <div className="container" style={{ display: "flex" }}>
+          <div className="store_container" style={{ display: "flex" }}>
             {props.hasCategory ? <span className="htabs pr-md-4">  <Category className="support_icons" label={"All Category"} /></span> : null}
             <span className="htabs pr-md-4 py-3"><img src={Healthcare} className="support_icons pr-2" style={{ height: 20 }} />Covid-19 Supplies</span>
             <span className="htabs pr-md-4 py-3"><img src={Layer_8} className="support_icons pr-2" style={{ height: 18 }} />Nearby Shops</span>
