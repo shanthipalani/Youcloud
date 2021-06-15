@@ -38,6 +38,8 @@ footer {
     color: white;
     /* justify-content: space-between; */
     /* font-family:'Raleway' !important; */
+    position: relative;
+    bottom: 20px;
 
 }
 
@@ -61,5 +63,22 @@ li{
     color: #f0ecec;
 }
 
-/* .footer_hrline{
+.footer_hrline{
+    position: relative;
+    bottom: 30px;
+}
+
+.footer_content_icons{
+    position: relative;
+    bottom: 40px;
+}
+
+.footer_content_bottom{
+    font-size: 13px;
+}
+
+/* @media only screen and (max-width:426px){
+.about_and_help_content{
+    display: flex;
+}
 } */

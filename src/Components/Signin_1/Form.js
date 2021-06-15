@@ -67,8 +67,8 @@ class Form extends Component {
                 <div className="font_family_text">
                     <header className="nav p-2">
                         <div className="head-1 container-fluid">
-                            <span>Copyright < AiFillCopyrightCircle/> 1996-2021 YouShop Ltd. All rights reserved</span>
-                            <span>Terms of Use - Privacy Policy - Link to Us</span>                            
+                            <span className="ml-5">Copyright < AiFillCopyrightCircle/> 1996-2021 YouShop Ltd. All rights reserved</span>
+                            <span className="mr-5">Terms of Use - Privacy Policy - Link to Us</span>                            
                         </div>
                     </header>
 

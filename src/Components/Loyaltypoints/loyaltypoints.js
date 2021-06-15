@@ -1,6 +1,6 @@
 import React from "react";
 import "./loyaltypoints.css";
-import Nav from "../navigation/nav";
+import Nav1 from "../navigation/nav1";
 import Footer from "../Footer/footer";
 import Calender from "../../Asset/images/calender.png";
 import Search from "../../Asset/images/search.png";
@@ -12,7 +12,7 @@ import {IoCalendarClearOutline} from 'react-icons/io5'
 function loyaltypoints() {
   return (
     <>
-      <Nav />
+      <Nav1 />
 
       <div className="container">
         <div className="row">

@@ -776,7 +776,7 @@ button {
   &.zoomable {
     transition: 0.2s transform;
     transform: scale(1);
-    width: 180px;
+    width: 200px;
     &:hover {
       transform: scale(1.03);
       //       -webkit-box-shadow: -1px 7px 21px -6px rgba(112,197,196,1);
@@ -891,7 +891,7 @@ button {
 
       span {
         color: black;
-        font-size: 16px;
+        // font-size: 16px;
         font-weight: bolder;
       }
 

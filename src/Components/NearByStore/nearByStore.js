@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import React from 'react'
 import Rating from "react-rating";
-import Nav from '../navigation/nav'
+import Nav1 from '../navigation/nav1'
 import Footer from '../Footer/footer'
 import './nearByStore.css'
 import eye from '../../Asset/images/eye.png';
@@ -126,7 +126,7 @@ function Result(props) {
 
             <div className="discounted-price-tag pl-2 pt-0">
               <Link to="/ProductPage"><img className="text-center" style={{ height: 30 }} src={require(`../../Asset/images/visitnow.png`).default} />
-              <small style={{ position: "absolute", top: "25%", left: 30 }}>Visit Now</small></Link>
+              <small style={{ position: "absolute", top: "25%", left: 30 }} className="visitnow_bt_color">Visit Now</small></Link>
 
             </div>
 
@@ -232,7 +232,7 @@ class NearByStore extends React.Component {
     return (
       <>
 
-        <Nav hasCategory={false} />
+        <Nav1 hasCategory={false} />
         <div className="container">
           <section className="row">
             <div className="col-12 pt-md-5">
@@ -316,7 +316,7 @@ class NearByStore extends React.Component {
                          <i class="fas fa-sort-amount-down fa-lg"></i>
                           </button> */}
 
-                  <img className="d-none d-md-block" style={{ height: 100, width: 100, position: "absolute", top: 40, right: 80 }} onClick={() => this.setState({
+                  <img className="d-none d-md-block" style={{ height: 100, width: 100, position: "absolute", top: 40, right: 0 }} onClick={() => this.setState({
                     showFilter: !this.state.showFilter
                   })} src={require(`../../Asset/images/filterBtn.png`).default} />
 
