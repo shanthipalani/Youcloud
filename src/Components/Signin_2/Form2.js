@@ -5,27 +5,19 @@ import { AiFillCopyrightCircle } from 'react-icons/ai';
 // import {Form, FormText} from 'react-bootstrap';
 // import FormFileInput from 'react-bootstrap/esm/FormFileInput';
 import './Form2.css'
-import eye from '../../Asset/images/eye.png';
+import Mobile from '../../Asset/images/mobile-icon.png';
 import Google from '../../Asset/images/Google.png'
-import { Form, Input, Checkbox, Select, Button } from 'antd';
+import { Form, Input, Checkbox, Select, Divider, Button } from 'antd';
 import { Row, Col } from 'react-bootstrap';
+import 'antd/dist/antd.css';
 import useSelection from 'antd/lib/table/hooks/useSelection';
-
-
-const validEmailMail = (expression) => {
-    const regEp = /^([a-zA-Z0-9.]{3,})@([a-z]+)\.([a-z]{2,5})$/
-    if (regEp.test(expression)) {
-        return true;
-    }
-    return false;
-}
-
 
 function Form2() {
     const { Option } = Select;
     const [signupFlag, setSignupFlag] = useState(false)
     const [signinFlag, setSigninFlag] = useState(true)
     const [forgetPasswordFlag, setForgetPasswordFlag] = useState(false)
+    const [mobilLogin, setMobilLogin] = useState(false)
     const [form] = Form.useForm();
 
     const prefixSelector = (
@@ -33,9 +25,11 @@ function Form2() {
             <Select
                 style={{
                     width: 70,
+                    border: '0 !important',
+	                borderBottom: '1px solid #d9d9d9 !important'
                 }}
             >
-                <Option value="86">+86</Option>
+                <Option value="91">+91</Option>
                 <Option value="87">+87</Option>
             </Select>
         </Form.Item>
@@ -69,41 +63,49 @@ function Form2() {
                                             layout="vertical"
                                         >
                                             <Form.Item label="Email">
-                                                <Input className="custom-input pl-0" placeholder="Enter your email" />
+                                                <Input className="custom-input" placeholder="Enter your email" />
                                             </Form.Item>
-                                            <Form.Item label="Password" className="pl-0">
-                                                <Input.Password className="p-0" placeholder="Enter your email password" />
+                                            <Form.Item label="Password">
+                                                <Input.Password placeholder="Enter your password" />
                                             </Form.Item>
                                             <Form.Item>
-                                                <Form.Item name="remember" id="keep_me_signed_font_color" valuePropName="checked" noStyle>
-                                                    <Checkbox >Keep me signed</Checkbox>
+                                                <Form.Item name="remember" className="remember-me" id="keep_me_signed_font_color" valuePropName="checked" noStyle>
+                                                    <Checkbox >Remeber me</Checkbox>
                                                 </Form.Item>
-
                                                 <a className="login-form-forgot forgot_password_color float-lg-right" onClick={() => {
                                                     setSigninFlag(false)
                                                     setSignupFlag(false)
+                                                    setMobilLogin(false)
+                                                    window.scrollTo(0, 0)
                                                     setForgetPasswordFlag(true)
                                                 }}>
                                                     Forgot password
-        </a>
+                                                </a>
                                             </Form.Item>
+                                            <Button htmlType="submit" className="button-youshop"> Sign in</Button>
                                         </Form>
-
-                                        <button className="button-1a"> Sign in</button>
-                                        <div className="signin-divider mt-4 d-flex">
-                                            <span className="or_font_color">Or</span><hr className="hr_line_color" />
+                                        <div className="mt-2 mb-4 d-flex">
+                                        <Divider className="signin-divider">Or</Divider>
                                         </div>
                                         <Row>
                                             <Col xs={12} lg={12}>
-                                                <button className="button-2a d-flex  align-items-center w-85 px-2 px-md-5 mb-3"><img src={Google} alt="google" /><div className="d-none d-md-flex ml-3">Continue with Google</div></button>
+                                                <button className="button-2a d-flex align-items-center px-2 px-md-5 mb-3"><img src={Google} alt="Google" /><div className="d-none d-md-flex ml-3">Continue with Google</div></button>
                                             </Col>
                                             <Col xs={12} lg={12}>
-                                                <button className="button-2a d-flex  align-items-center w-90 px-2 px-md-5 mb-3">{/*<img src={Fb} alt="FB" />*/}<div className="d-none d-md-flex ml-3">Continue with Mobile</div></button>
+                                                <button className="button-2a d-flex align-items-center px-2 px-md-5 mb-3" onClick={() => {
+                                                    setForgetPasswordFlag(false)
+                                                    setSignupFlag(false)
+                                                    setSigninFlag(false)
+                                                    window.scrollTo(0, 0)
+                                                    setMobilLogin(true)
+                                                }}><img src={Mobile} alt="Mobile" /><div className="d-none d-md-flex ml-3">Continue with Mobile</div></button>
                                             </Col>
                                             <Col xs={12} lg={12}>
                                                 <p className="dont_have_an_accountsize">Don't Have an Account? <a className="Signup_buttoncolor" onClick={() => {
                                                     setForgetPasswordFlag(false)
                                                     setSigninFlag(false)
+                                                    setMobilLogin(false)
+                                                    window.scrollTo(0, 0)
                                                     setSignupFlag(true)
                                                 }}> Sign Up</a> </p>
                                             </Col>
@@ -112,24 +114,22 @@ function Form2() {
                                 }
                                 {signupFlag &&
                                     <div>
-                                        <div>
-                                            <p className="welcome_back">Let's get started</p>
-                                            <p className="online">Stay signed in with your account to make searching easier</p>
-                                        </div>
+                                        <h3 className="welcome_back"><strong>Let's get started</strong></h3>
+                                        <p className="online">Stay signed in with your account to make searching easier</p>
                                         <Form
                                             layout="vertical"
                                         >
                                             <Form.Item label="Name">
-                                                <Input className="custom-input pl-0" placeholder="Enter your name" />
+                                                <Input className="custom-input" placeholder="Enter your name" />
                                             </Form.Item>
                                             <Form.Item label="Email">
-                                                <Input className="custom-input pl-0" placeholder="Enter your email" />
+                                                <Input className="custom-input" placeholder="Enter your email" />
                                             </Form.Item>
-                                            <Form.Item label="Password" className="pl-0">
-                                                <Input.Password className="p-0" placeholder="********" />
+                                            <Form.Item label="Password">
+                                                <Input.Password  placeholder="********" />
                                             </Form.Item>
-                                            <Form.Item label="Re-type" className="pl-0">
-                                                <Input.Password className="p-0" placeholder="********" />
+                                            <Form.Item label="Re-type">
+                                                <Input.Password  placeholder="********" />
                                             </Form.Item>
                                             <Form.Item
                                                 name="country"
@@ -402,12 +402,10 @@ function Form2() {
                                             >
                                                 <Checkbox>
                                                     By signing up, you agree to <a href="">Terms & Condtion</a>
-
-
                                                 </Checkbox>
                                             </Form.Item>
                                             <Form.Item>
-                                                <button className="button-1a" type="submit">Sign up</button>
+                                                <Button className="button-youshop"> Sign up</Button>
                                             </Form.Item>
                                         </Form>
 
@@ -416,6 +414,8 @@ function Form2() {
                                                 <p className="dont_have_an_accountsize">Already have an account? <a className="Signup_buttoncolor" onClick={() => {
                                                     setForgetPasswordFlag(false)
                                                     setSignupFlag(false)
+                                                    setMobilLogin(false)
+                                                    window.scrollTo(0, 0)
                                                     setSigninFlag(true)
                                                 }}> Sign in</a> </p>
                                             </Col>
@@ -423,6 +423,77 @@ function Form2() {
 
                                     </div>
 
+                                }
+                                {forgetPasswordFlag &&
+                                    <div>
+                                        <h3 className="welcome_back"><strong>Forgot Password?</strong></h3>
+                                        <p className="online">We will send you a link to reset password</p>
+                                        <Form
+                                            layout="vertical"
+                                        >
+                                             <Form.Item label="Email">
+                                                <Input className="custom-input" placeholder="Enter your email" />
+                                            </Form.Item>
+                                            <Button htmlType="submit" className="button-youshop mt-2"> Rest my password</Button>
+                                        </Form>
+                                        
+                                        <Row className="mt-4">
+                                            <Col xs={12} lg={12}>
+                                                <p className="dont_have_an_accountsize">Remember your password? <a className="Signup_buttoncolor" onClick={() => {
+                                                    
+                                                    setForgetPasswordFlag(false)
+                                                    setSignupFlag(false)
+                                                    setMobilLogin(false)
+                                                    window.scrollTo(0, 0)
+                                                    setSigninFlag(true)
+                                                }}> Sign in</a> </p>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                }
+                                {mobilLogin &&
+                                    <div>
+                                        <h3 className="welcome_back"><strong>Login with OTP</strong></h3>
+                                        <p className="online">Please enter the mobile number to get otp on mobile</p>
+                                        <Form
+                                            layout="vertical"
+                                        >
+                                            <Form.Item
+                                                name="phone"
+                                                label="Phone Number"
+                                            >
+                                                <Input
+                                                    placeholder="Enter your number"
+                                                    addonBefore={prefixSelector}
+                                                    style={{
+                                                        width: '100%',
+                                                    }}
+                                                />
+                                                </Form.Item>
+                                                <Form.Item
+                                                name="otp"
+                                                label="Enter OTP"
+                                            >
+                                                <Input
+                                                    placeholder="Enter OTP"
+                                                    disabled
+                                                />
+                                            </Form.Item>
+                                            <Button htmlType="submit" className="button-youshop mt-2"> Request OTP</Button>
+                                        </Form>
+                                        
+                                        <Row className="mt-4">
+                                            <Col xs={12} lg={12}>
+                                                <p className="dont_have_an_accountsize">Do you have an account? <a className="Signup_buttoncolor" onClick={() => {
+                                                    setForgetPasswordFlag(false)
+                                                    setSignupFlag(false)
+                                                    setMobilLogin(false)
+                                                    window.scrollTo(0, 0)
+                                                    setSigninFlag(true)
+                                                }}> Sign in</a> </p>
+                                            </Col>
+                                        </Row>
+                                    </div>
                                 }
                             </div>
 
