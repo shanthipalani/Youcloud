@@ -263,24 +263,21 @@ const Orderhistory = props =>{
                     </table>
                 
                 </section>
-                <div aria-label="...">
-          <ul className=" pagination_design">
-            <li className="page-item disabled">
-              <span className="page-link">Previous</span>
-            </li>
-            <li className="page-item"><a className="page-link" href="#">1</a></li>
-            <li className="page-item active">
-              <span className="page-link">
-                2
-                <span className="sr-only">(current)</span>
-              </span>
-            </li>
-            <li className="page-item"><a className="page-link" href="#">3</a></li>
-            <li className="page-item">
-              <a className="page-link" href="#">Next</a>
-            </li>
-          </ul>
-        </div>
+                {/* <div aria-label="..."> */}
+                <nav className="pagination-container Page navigation example mb-5">
+                                <ul class="pagination justify-content-end">
+                                    <li class="page-item prev disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                    <a class="page-link next" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+        {/* </div> */}
             </div>
             <div className="footer_gap">
                 <Footer />
@@ -293,7 +290,7 @@ const Orderhistory = props =>{
             <Form style={{color: "teal"}}>
             <FormGroup>
         <Label for="exampleSelect" style={{fontSize: 10}}>Select order return reason</Label>
-        <Input type="select" name="select" id="exampleSelect" bsSize="sm"    style={{borderRadius: 20, paddingLeft: 15, color: "teal", fontSize: 12}}>
+        <Input type="select" name="select" id="exampleSelect" bsSize="sm"   style={{borderRadius: 20, paddingLeft: 15, color: "teal", fontSize: 12}}>
           <option>Package damaged</option>
           <option>2</option>
           <option>3</option>

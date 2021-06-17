@@ -1,7 +1,7 @@
 import React from 'react';
-/*import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';*/
+import Backdrop from '@material-ui/core/Backdrop';
 import Rating from "react-rating";
 
 // import Fade from '@material-ui/core/Fade';
@@ -9,18 +9,18 @@ import './addreview.css'
 // import Modal from 'react-bootstrap/Modal'
 
 
-/*const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
   modal: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    // maxWidth:'500px',
-    // borderRadius:'100px'
+    maxWidth:'500px',
+    borderRadius:'100px'
 
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    // border: '2px solid #000',
+    border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
     minWidth:'640px',
@@ -28,10 +28,10 @@ import './addreview.css'
     
     
   },
-}));*/
+}));
 
 export default function TransitionsModal() {
-  //const classes = useStyles();
+  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -50,7 +50,7 @@ export default function TransitionsModal() {
           emptySymbol="fas fa-star empty-star-color"
           fullSymbol="fas fa-star rated-star-color"
           initialRating={5}
-          readonly={false}
+          readonly={true}
           start={0}
           stop={5}
           fractions={2}
@@ -64,7 +64,7 @@ export default function TransitionsModal() {
       </button>
       </div>
 
-      {/*<Modal
+      <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className={classes.modal}
@@ -113,7 +113,7 @@ export default function TransitionsModal() {
           </div>
           </div>
         
-      </Modal>*/}
+      </Modal>
     </div>
   );
 }
