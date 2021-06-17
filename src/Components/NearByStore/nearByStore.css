@@ -9,8 +9,13 @@ body{
 }
 
 .load_more{
-    margin-bottom: 35px;
+    cursor: pointer;
 }
+
+.location.truncate, .location-text {
+    font-size: 12px !important;
+}
+
 
 .form_border_1{
     

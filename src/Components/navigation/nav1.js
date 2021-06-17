@@ -77,7 +77,7 @@ function Nav1(props) {
         </div>
         <div className="icon navcontainer store_container pt-2 pb-3">
           <div className="row w-100 m-0">
-            <div className="col-lg-2 col-4 d-none d-md-flex">
+            <div className="col-lg-2 col-4 d-none d-md-flex p-0">
               {/* <Link to="/" className="">
                 <span className="you">You</span>
                 <span className="shop">Shop</span>

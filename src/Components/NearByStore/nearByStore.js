@@ -70,17 +70,10 @@ function Result(props) {
           }}
         >
 
-          <div
-            className="package-img"
-
-          >
-          </div>
+          <div className="package-img"></div>
           <div className="ml-2 mr-4 px-1 py-3 pb-4 info">
-            <div
-              className="pl-2 pt-1 location truncate"
-            >
+            <div className="pl-2 pt-1 location truncate">
               <span className="country">Al Maya Supermarket</span>
-
               <div className="tr-rating d-flex w-100 flex-row pt-2">
                 <Rating
                   emptySymbol="far fa-star empty-star-color"
@@ -95,8 +88,6 @@ function Result(props) {
               </div>
             </div>
             <div className="package-desc">
-
-
               <div
                 className={`truncate-${!false && true > 200
                     ? "trip"
@@ -104,10 +95,10 @@ function Result(props) {
                   } pb-2`}
 
               >
-                <p className="pl-2 mb-0 text-muted pt-2" style={{ overflow: "hidden" }}>
+                <p className="pl-2 mb-0 text-muted pt-2 location-text" style={{ overflow: "hidden" }}>
                   <i className="fas fa-map-marker-alt text-muted pr-2" style={{ paddingLeft: 1 }}></i>
-   Al Karama, Dubai
-          </p>
+                  Al Karama, Dubai
+                </p>
                 {!true && 100 > 200 ? (
                   
                   <button
@@ -142,7 +133,7 @@ function Result(props) {
     </div>
 
   ))}
-    {props.count > count ? <div class="col-12 pt-5">
+    {props.count > count ? <div class="col-12 pt-5 pb-5">
       <div className="text-center load_more" onClick={() => setCount(count + 5)}>Load More....</div>
     </div> : null}
   </>
@@ -154,20 +145,20 @@ const initialPanes = [
   {
     country: "All Stores", key: '0',
     listings: [
-      { title: 'Dubai', content: <div className="row row-cols-5"><Result count={16} /></div>, key: '0' },
-      { title: 'Al Karma', content: <div className="row row-cols-5"><Result count={4} /></div>, key: '1' }
+      { title: 'Dubai', content: <div className="row"><Result count={16} /></div>, key: '0' },
+      { title: 'Al Karma', content: <div className="row"><Result count={4} /></div>, key: '1' }
     ]
   },
   {
     country: "Dubai", key: '1',
     listings: [
-      { title: 'Al Karma', content: <div className="row row-cols-5"><Result count={5} /></div>, key: '0' },
+      { title: 'Al Karma', content: <div className="row"><Result count={5} /></div>, key: '0' },
     ]
   },
   {
     country: "Abu dhabi", key: '2',
     listings: [
-      { title: 'Al Falah', content: <div className="row row-cols-5"><Result count={14} /></div>, key: '0' },
+      { title: 'Al Falah', content: <div className="row"><Result count={14} /></div>, key: '0' },
     ]
   }
 ];
@@ -232,7 +223,6 @@ class NearByStore extends React.Component {
     const plainOptions = ['Value 1', 'Value 2', 'Value 3'];
     return (
       <>
-
         <Nav1 hasCategory={false}  />
         <div className="store_container">
       

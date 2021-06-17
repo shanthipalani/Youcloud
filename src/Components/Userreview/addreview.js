@@ -1,7 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+/*import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
+import Backdrop from '@material-ui/core/Backdrop';*/
 import Rating from "react-rating";
 
 // import Fade from '@material-ui/core/Fade';
@@ -9,7 +9,7 @@ import './addreview.css'
 // import Modal from 'react-bootstrap/Modal'
 
 
-const useStyles = makeStyles((theme) => ({
+/*const useStyles = makeStyles((theme) => ({
   modal: {
     display: 'flex',
     alignItems: 'center',
@@ -28,10 +28,10 @@ const useStyles = makeStyles((theme) => ({
     
     
   },
-}));
+}));*/
 
 export default function TransitionsModal() {
-  const classes = useStyles();
+  //const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -43,7 +43,7 @@ export default function TransitionsModal() {
   };
 
   return (
-    <div className="maincontent">
+    <div className="review-filter">
       <div className="d-flex review_header_content">
         <div className="text-center">Reviews 16</div>
         <Rating
@@ -64,7 +64,7 @@ export default function TransitionsModal() {
       </button>
       </div>
 
-      <Modal
+      {/*<Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className={classes.modal}
@@ -76,7 +76,7 @@ export default function TransitionsModal() {
           timeout: 500,
         }}
       >
-        {/* <Fade in={open}> */}
+       
         <div className="modalwidth">
           <div className={classes.paper} >
             <p className="reviewheading">Add Your Review</p>
@@ -109,12 +109,11 @@ export default function TransitionsModal() {
               </div>
             </form>
 
-            {/* <h2 id="transition-modal-title">Transition modal</h2>
-            <p id="transition-modal-description">react-transition-group animates me.</p> */}
+            
           </div>
           </div>
-        {/* </Fade> */}
-      </Modal>
+        
+      </Modal>*/}
     </div>
   );
 }

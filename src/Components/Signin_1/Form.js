@@ -3,7 +3,7 @@ import { Component } from "react";
 //import { Link } from 'react-router';
 //import { Link } from "react-router-dom";
 //import 'bootstrap/dist/css/bootstrap.min.css';
-import './Form.css';
+//import './Form.css';
 // import { Glyphicon } from 'react-bootstrap';
 import { FcGoogle } from 'react-icons/fc';
 import { AiFillFacebook, AiFillCopyrightCircle } from 'react-icons/ai';
