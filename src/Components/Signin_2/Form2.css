@@ -36,24 +36,34 @@ body {
 	font-size: 0.875rem;
 }
 
-.button-1a {
-	min-height: 45px;
+.button-youshop {
+	/*height: 40px !important;
 	color: #125E64 !important;
-	background-color: white;
-	border: 2px solid #125E64;
-	width: 50%;
+	background-color: white !important;
+	border: 2px solid #125E64 !important;
+	width: 100% !important;
+	font-size: 14px !important;*/
+
+	background: #125E64 !important;
+    width: 100% !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    border-radius: 5px !important;
+    height: 40px !important;
 }
 
-.signin-divider hr {
-	width: 160px;
-	margin: 12px 20px;
+.signin-divider span{
+	position: relative;
+	top: 10px;
+	font-size: 14px;
 }
 
 .button-2a {
 	background-color: white;
 	border: 1px solid #dee2e6;
-	height: 50px;
-	font-size: 15px;
+	height: 40px;
+	font-size: 14px;
+	width:100%
 }
 
 .button-3 {
@@ -62,10 +72,9 @@ body {
 	border: 1px solid black;
 }
 
-.forgot_password_color {
-	color: #2DCCA9;
-	font-size: 12px;
-
+.login-form-forgot {
+	top: 3px;
+    position: relative;
 }
 
 @media only screen and (max-width:426px) {
@@ -190,12 +199,19 @@ hr {
 	border: #E1E1E1;
 }
 
-.Signup_buttoncolor, .Signin_buttoncolor  {
-	cursor: pointer;
+.Signup_buttoncolor, .Signin_buttoncolor, .forgot_password_color  {
+	/*cursor: pointer;
 	color: #2DCCA9;
-	font-size: 12px;
+	font-size: 12px;*/
+	cursor: pointer;
+    color: #125E64;
+    font-size: 12px;
+    font-weight: bold;
 }
 
+.ant-form-item {
+	margin-bottom: 12px !important;
+}
 .email_color {
 	color: #092C4C;
 }
@@ -216,37 +232,14 @@ hr {
 	/* height: 100px; */
 }
 
-span.ant-input-password, .ant-select-selector {
-	border: 0 !important;
-	border-bottom: 1px solid #d9d9d9 !important;
-}
-
-input.custom-input  {
-	border: 0 !important;
-	border-bottom: 1px solid #d9d9d9 !important;
-}
 
 .ant-form label{
 	color: #092C4C !important;
 }
 
-.ant-input:hover .ant-input:focus, .ant-input-focused {
-	border-color: none !important;
-	box-shadow: none !important;
-}
-
-.ant-input-affix-wrapper-focused, .ant-input-affix-wrapper:focus .ant-input-affix-wrapper:hover {
-	border-color: none !important;
-	box-shadow: none !important;
-}
-
-:focus-visible {
-	outline: none !important;
-}
 
 .Lets_get_started{
-    text-align: center;
-    
+    text-align: center; 
     font-size: 20px;
 }
 
@@ -266,20 +259,9 @@ input.custom-input  {
     background-color: rgb(243, 241, 241);
 }
 
-input{
-    width: 100%;
-    padding: 10px;
-    border: 0;
-    outline:none;
-    border-bottom: 1px solid rgb(238, 231, 231);
-
-}
-
 .accept_terms{
     width: 18px;
     height: 18px;
-    
-   
 }
 
 .dont_have_an_acc{
