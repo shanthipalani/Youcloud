@@ -14,7 +14,7 @@ function loyaltypoints() {
     <>
       <Nav1 />
 
-      <div className="container">
+      <div className="container loyalty_container">
         <div className="row">
           <div className="col-lg-12 col-md-12 mt-4">              
 
@@ -29,19 +29,20 @@ function loyaltypoints() {
                   <option value="Sortby">Sortby</option>
                 </select>
               </div>
-              {/* <div className="row"> */}
-                <div className="col d-flex ml-5">
+              
+                <div className="col d-flex calender_and_search">
                   <div>                    
-                    <select class="selectpicker calender_bordersize">
+                    <select class="selectpicker calender_bordersize mt-1">
                         <option >Last Month</option>
                         <option data-icon="glyphicon-star">Option2</option>
                         <option data-icon="glyphicon-glass">Option3</option>
                     </select>                    
                   </div>
-                  {/* </div> */}
+                  
+                  
 
-                  {/* <div className="col"> */}
-                    <div className="form-group has-search ml-5">
+                  
+                    <div className="form-group has-search ml-4 searchnowwidth">
                       <span className="fa fa-search form-control-feedback"></span>
                       <input
                         type="text"
@@ -49,12 +50,10 @@ function loyaltypoints() {
                         placeholder="Search Now"
                       />
                     </div>
-                    {/* <div>
-                        <input type="text" placeholder="Search Now"/>
-                    </div> */}
+                    
                   </div>
                 
-              {/* </div> */}
+              
             </div>
             </div>
             <div className="container">
@@ -144,6 +143,19 @@ function loyaltypoints() {
               </div>
             </div>
             <br />
+            <nav className="pagination-container Page navigation example mb-5">
+                                <ul class="pagination justify-content-end">
+                                    <li class="page-item prev disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                    <a class="page-link next" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
 
             </div>
           </div>
@@ -161,6 +173,7 @@ function loyaltypoints() {
             </div>
         </div>
      </div> */}
+
 
       <Footer />
     </>

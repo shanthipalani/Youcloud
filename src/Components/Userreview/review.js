@@ -73,7 +73,7 @@ const review = () =>{
                                             emptySymbol="fas fa-star empty-star-color"
                                             fullSymbol="fas fa-star rated-star-color"
                                             initialRating={5}
-                                            readonly={false}
+                                            readonly={true}
                                             start={0}
                                             stop={5}
                                             fractions={2}

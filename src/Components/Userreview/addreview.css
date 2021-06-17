@@ -49,7 +49,11 @@
 .sortby{
     width: 150px;
     height: 30px;
+    padding: 0px 10px;
 }
+
+.sortby:focus-visible{
+    outline: none;}
 
 .maincontent{
     float: right;
