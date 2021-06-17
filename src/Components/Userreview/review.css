@@ -43,3 +43,27 @@
     width: 150px;
     height: 50px;
 } */
+
+.review_header_content {
+    margin-left: auto;
+    justify-content: flex-end !important;
+}
+
+.pagination-container {
+    margin: 50px 0px !important;
+}
+
+.pagination-container .page-item {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.pagination-container .page-item.active .page-link {
+    color:#fff;
+    background-color: #1B949D;
+    border: none;
+}
+
+.pagination-container .page-item .page-link {
+    color: #000;
+}
